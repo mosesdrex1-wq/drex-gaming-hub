@@ -42,18 +42,18 @@ h1{color:#00ff00;text-shadow:0 0 15px #00ff00;font-size:32px;margin-top:40px}
 <p style="font-size:12px;color:#0f0">FIRST 10 PLAYERS ONLY! • DAILY 8PM EAT</p>
 </div>
 
-<!-- BOT -->
+<!-- BOT - FRIENDLY VERSION -->
 <div id="drexBot">
 <button id="botBtn" onclick="let b=document.getElementById('botBox');b.style.display=b.style.display=='flex'?'none':'flex'">💬</button>
 <div id="botBox">
 <div id="botHead">DREX BOT — 24/7 🤖</div>
-<div id="botMsgs"><div class="botMsg">Yo! I'm Drex Bot 💚<br>Ask me: fee, join, prize, time</div></div>
+<div id="botMsgs"><div class="botMsg">Heyy! I'm Drex Bot 💚 Your 24/7 gaming plug! Just say hi 😎</div></div>
 <div id="botInput"><input id="userIn" placeholder="Type..."><button onclick="sendMsg()">Send</button></div>
 </div>
 </div>
 
 <script>
-// MATRIX RAIN - NOT REMOVED
+// MATRIX RAIN - SAME, NOT TOUCHED
 const canvas=document.getElementById('matrix');
 const ctx=canvas.getContext('2d');
 canvas.height=window.innerHeight;
@@ -78,7 +78,7 @@ drops[i]++;
 setInterval(draw,33);
 window.addEventListener('resize',()=>{canvas.width=window.innerWidth;canvas.height=window.innerHeight;});
 
-// BOT LOGIC
+// BOT LOGIC - FRIENDLY VERSION
 function sendMsg(){
 let input=document.getElementById('userIn');
 let txt=input.value.trim();
@@ -86,12 +86,31 @@ if(!txt) return;
 let lower=txt.toLowerCase();
 let msgs=document.getElementById('botMsgs');
 msgs.innerHTML+=`<div class="botMsg userMsg">${txt}</div>`;
-let reply="Type JOIN to get WhatsApp link! 💚";
-if(lower.includes('fee')||lower.includes('2k')||lower.includes('price')) reply="Entry is ONLY 2K UGX 💰 Send to 0745123623 via Mobile Money";
-else if(lower.includes('join')||lower.includes('play')) reply="Click JOIN button or WhatsApp 0745123623 with 'DREX JOIN' 🔥";
-else if(lower.includes('prize')||lower.includes('win')) reply="Prize: BIG CASH + Airtime! Winner takes all 💸";
-else if(lower.includes('time')||lower.includes('when')) reply="Tournaments daily 8PM EAT. Join before 7PM!";
-else if(lower.includes('pubg')||lower.includes('free fire')||lower.includes('game')) reply="We host PUBG & Free Fire. Which one do you play? 🎮";
+let reply="";
+if(lower.includes('hi')||lower.includes('hey')||lower.includes('hello')||lower.includes('yo')||lower.includes('sup')){
+  reply="Heyy boss! 👋 Welcome to DREX HUB 💚 I'm Drex Bot — your gaming plug! What you wanna know? (fee, prize, how to join?)";
+}
+else if(lower.includes('fee')||lower.includes('2k')||lower.includes('price')||lower.includes('how much')){
+  reply="Just 2K UGX only bro! 💸 Super cheap. Send to 0745123623 MTN MoMo then send screenshot. I'll add you instantly ✅";
+}
+else if(lower.includes('join')||lower.includes('play')||lower.includes('add me')){
+  reply="Let's get you in! 🔥 1) Send 2K to 0745123623 2) Screenshot 3) I add you to tourney group. Easy! You playing PUBG or Free Fire?";
+}
+else if(lower.includes('prize')||lower.includes('win')||lower.includes('earn')){
+  reply="Prize is BIG! 💰 If we are 5 players, winner takes 5K. More players = more cash! Last week winner took 15K 😎";
+}
+else if(lower.includes('time')||lower.includes('when')||lower.includes('today')){
+  reply="We play daily at 8PM EAT ⏰ Lobby opens 7:45PM. Pay before 7PM to secure slot, only 10 slots left today!";
+}
+else if(lower.includes('pubg')||lower.includes('free fire')||lower.includes('ff')){
+  reply="We got both! 🎮 PUBG and Free Fire — which one you crack? I'll put you in that group.";
+}
+else if(lower.includes('scam')||lower.includes('trust')||lower.includes('fake')){
+  reply="No scam here bro, 100% legit ✅ Check our site, we have real players daily. Pay 2K, you play. Win = instant MoMo. I can show you past winners if you want!";
+}
+else {
+  reply="Haha I got you! 😅 Just tell me: you wanna JOIN, know the FEE, PRIZE, or TIME? Type one and I got you 💚 Or tap WhatsApp button to talk to Drex directly!";
+}
 msgs.innerHTML+=`<div class="botMsg">${reply}</div>`;
 input.value=""; msgs.scrollTop=msgs.scrollHeight;
 }
