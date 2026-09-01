@@ -6,17 +6,27 @@
 <title>DREX GAMING HUB</title>
 <style>
 body{margin:0;background:black;color:white;font-family:Arial;text-align:center;padding:20px;overflow-x:hidden}
-h1{color:#00ff00;text-shadow:0 0 10px #00ff00;font-size:32px}
-.card{background:rgba(20,20,20,0.85);border:1px solid #00ff00;border-radius:15px;padding:20px;margin:20px auto;max-width:400px;box-shadow:0 0 15px #00ff00}
+h1{color:#00ff00;text-shadow:0 0 15px #00ff00;font-size:32px;margin-top:40px}
+.card{background:rgba(20,20,20,0.9);border:1px solid #00ff00;border-radius:15px;padding:20px;margin:20px auto;max-width:400px;box-shadow:0 0 15px #00ff00}
 .btn{display:inline-block;background:#00ff00;color:black;padding:12px 25px;border-radius:25px;text-decoration:none;font-weight:bold;margin-top:10px}
 .btn:hover{background:white}
+#drexBot{position:fixed;bottom:20px;right:20px;z-index:9999}
+#botBtn{width:60px;height:60px;background:#00ff00;border-radius:50%;border:none;font-size:28px;box-shadow:0 0 15px #00ff00;cursor:pointer}
+#botBox{display:none;width:300px;height:380px;background:#111;border:1px solid #0f0;border-radius:15px;position:absolute;bottom:70px;right:0;overflow:hidden;flex-direction:column}
+#botHead{background:#00ff00;color:black;padding:10px;font-weight:bold;font-size:14px}
+#botMsgs{flex:1;padding:10px;overflow-y:auto;text-align:left;font-size:13px}
+.botMsg{background:#222;margin:6px 0;padding:8px 10px;border-radius:10px}
+.userMsg{background:#00ff00;color:black;text-align:right;margin-left:30px}
+#botInput{display:flex;border-top:1px solid #0f0}
+#botInput input{flex:1;background:black;color:white;border:none;padding:10px;outline:none}
+#botInput button{background:#0f0;border:none;padding:10px 15px;font-weight:bold;cursor:pointer}
 </style>
 </head>
 <body>
 <canvas id="matrix" style="position:fixed;top:0;left:0;width:100%;height:100%;z-index:-1;"></canvas>
 
 <h1>🔥 DREX GAMING HUB 🔥</h1>
-<p>Welcome to Uganda's Hottest Gaming Zone</p>
+<p>Uganda's Hottest Gaming Zone</p>
 
 <div class="card">
 <h2>🎮 PUBG / FREE FIRE TOURNAMENT</h2>
@@ -29,10 +39,21 @@ h1{color:#00ff00;text-shadow:0 0 10px #00ff00;font-size:32px}
 <h2>📞 Contact</h2>
 <p>WhatsApp: 0745123623</p>
 <p>Link: mosesdrex1-wq.github.io</p>
-<p style="font-size:12px;color:#0f0">FIRST 10 PLAYERS ONLY!</p>
+<p style="font-size:12px;color:#0f0">FIRST 10 PLAYERS ONLY! • DAILY 8PM EAT</p>
+</div>
+
+<!-- BOT -->
+<div id="drexBot">
+<button id="botBtn" onclick="let b=document.getElementById('botBox');b.style.display=b.style.display=='flex'?'none':'flex'">💬</button>
+<div id="botBox">
+<div id="botHead">DREX BOT — 24/7 🤖</div>
+<div id="botMsgs"><div class="botMsg">Yo! I'm Drex Bot 💚<br>Ask me: fee, join, prize, time</div></div>
+<div id="botInput"><input id="userIn" placeholder="Type..."><button onclick="sendMsg()">Send</button></div>
+</div>
 </div>
 
 <script>
+// MATRIX RAIN - NOT REMOVED
 const canvas=document.getElementById('matrix');
 const ctx=canvas.getContext('2d');
 canvas.height=window.innerHeight;
@@ -56,6 +77,25 @@ drops[i]++;
 }
 setInterval(draw,33);
 window.addEventListener('resize',()=>{canvas.width=window.innerWidth;canvas.height=window.innerHeight;});
+
+// BOT LOGIC
+function sendMsg(){
+let input=document.getElementById('userIn');
+let txt=input.value.trim();
+if(!txt) return;
+let lower=txt.toLowerCase();
+let msgs=document.getElementById('botMsgs');
+msgs.innerHTML+=`<div class="botMsg userMsg">${txt}</div>`;
+let reply="Type JOIN to get WhatsApp link! 💚";
+if(lower.includes('fee')||lower.includes('2k')||lower.includes('price')) reply="Entry is ONLY 2K UGX 💰 Send to 0745123623 via Mobile Money";
+else if(lower.includes('join')||lower.includes('play')) reply="Click JOIN button or WhatsApp 0745123623 with 'DREX JOIN' 🔥";
+else if(lower.includes('prize')||lower.includes('win')) reply="Prize: BIG CASH + Airtime! Winner takes all 💸";
+else if(lower.includes('time')||lower.includes('when')) reply="Tournaments daily 8PM EAT. Join before 7PM!";
+else if(lower.includes('pubg')||lower.includes('free fire')||lower.includes('game')) reply="We host PUBG & Free Fire. Which one do you play? 🎮";
+msgs.innerHTML+=`<div class="botMsg">${reply}</div>`;
+input.value=""; msgs.scrollTop=msgs.scrollHeight;
+}
+document.getElementById('userIn').addEventListener('keypress',e=>{if(e.key==='Enter') sendMsg()});
 </script>
 </body>
 </html>
