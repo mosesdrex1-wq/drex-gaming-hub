@@ -5,19 +5,33 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>DREX HUB - UG Gaming</title>
 <style>
-body{background:#0f0f0f;color:white;font-family:Arial;padding:15px;margin:0}
-h1{text-align:center;color:#00ff88}
-.games{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:15px}
-.card{background:#1c1c1c;border-radius:15px;padding:15px;border:1px solid #333;text-align:center}
-.card img{width:100%;height:150px;object-fit:cover;border-radius:10px}
-.card h2{margin:10px 0 5px 0}
-.btn{display:block;background:#00ff88;color:black;padding:10px;border-radius:8px;text-decoration:none;font-weight:bold;margin-top:10px}
-.cod{border-color:gold}.pubg{border-color:orange}.ff{border-color:red}.efoot{border-color:#00aaff}
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:Arial;background:black;color:white;overflow-x:hidden}
+#matrix{position:fixed;top:0;left:0;width:100%;height:100%;z-index:-1;opacity:0.4}
+.content{position:relative;z-index:1;padding:15px}
+h1{text-align:center;color:#00ff88;text-shadow:0 0 15px #00ff88;margin-top:20px;font-size:30px}
+.subtitle{text-align:center;margin-bottom:20px;color:#00ff88;letter-spacing:2px}
+.games{display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:15px;max-width:950px;margin:0 auto}
+.card{background:rgba(20,20,20,0.92);border:1px solid #333;border-radius:15px;padding:12px;text-align:center;backdrop-filter:blur(6px);box-shadow:0 0 10px rgba(0,255,136,0.2)}
+.card img{width:100%;height:115px;object-fit:contain;background:#000;border-radius:10px;padding:5px}
+.card h2{font-size:15px;margin:10px 0 5px 0}
+.card p{font-size:12px;color:#aaa}
+.btn{display:block;padding:9px;border-radius:8px;text-decoration:none;font-weight:bold;margin-top:10px;font-size:13px}
+.pubg{border-color:#f2a900}.pubg.btn{background:#f2a900;color:black}
+.ffmax{border-color:#00ff88}.ffmax.btn{background:#00ff88;color:black}
+.ff{border-color:#ff3333}.ff.btn{background:#ff3333;color:white}
+.efoot{border-color:#00aaff}.efoot.btn{background:#00aaff;color:white}
+.cod{border-color:gold}.cod.btn{background:gold;color:black}
+.footer{text-align:center;margin:35px 0 20px 0;color:#555;font-size:11px}
 </style>
 </head>
 <body>
+
+<canvas id="matrix"></canvas>
+
+<div class="content">
 <h1>💚 DREX HUB 💚</h1>
-<p style="text-align:center">Daily Tournaments 8PM EAT - Uganda's #1</p>
+<p class="subtitle">DAILY TOURNAMENTS 8PM EAT • UGANDA #1</p>
 
 <div class="games">
 
@@ -25,37 +39,62 @@ h1{text-align:center;color:#00ff88}
 <img src="pubg.jpg" alt="PUBG">
 <h2>PUBG MOBILE</h2>
 <p>Squad • Daily 8PM</p>
-<a class="btn" href="https://wa.me/256745123623?text=JOIN%20PUBG">JOIN NOW</a>
+<a class="btn" href="https://wa.me/256745123623?text=JOIN%20PUBG%20DREX">JOIN NOW</a>
 </div>
 
 <div class="card ff">
 <img src="freefire.jpg" alt="Free Fire">
 <h2>FREE FIRE</h2>
 <p>Squad • Daily 8PM</p>
-<a class="btn" href="https://wa.me/256745123623?text=JOIN%20FF">JOIN NOW</a>
+<a class="btn" href="https://wa.me/256745123623?text=JOIN%20FF%20DREX">JOIN NOW</a>
 </div>
 
-<div class="card ff">
-<img src="ffmax.jpg" alt="FF Max">
+<div class="card ffmax">
+<img src="ffmax.jpg" alt="FF MAX">
 <h2>FF MAX</h2>
 <p>High Graphics Battle</p>
-<a class="btn" href="https://wa.me/256745123623?text=JOIN%20FFMAX">JOIN NOW</a>
+<a class="btn" href="https://wa.me/256745123623?text=JOIN%20FFMAX%20DREX">JOIN NOW</a>
 </div>
 
 <div class="card efoot">
 <img src="efootball.jpg" alt="eFootball">
 <h2>eFootball™ KONAMI</h2>
 <p>1v1 • NEW!</p>
-<a class="btn" style="background:#00aaff" href="https://wa.me/256745123623?text=JOIN%20eFootball">JOIN eFootball</a>
+<a class="btn" href="https://wa.me/256745123623?text=JOIN%20eFootball%20DREX">JOIN eFootball</a>
 </div>
 
 <div class="card cod">
 <img src="codm.jpg" alt="CODM">
-<h2>CODM</h2>
-<p>Coming Soon!</p>
-<a class="btn" style="background:gold" href="#">SOON</a>
+<h2>CALL OF DUTY MOBILE</h2>
+<p>BR & MP • Daily 8PM</p>
+<a class="btn" href="https://wa.me/256745123623?text=JOIN%20CODM%20DREX">JOIN CODM</a>
 </div>
 
 </div>
+
+<p class="footer">WhatsApp: 0745123623 | mosesdrex1-wq.github.io | DREX HUB 2026</p>
+</div>
+
+<script>
+// MATRIX RAIN - Original Effect Kept!
+const c=document.getElementById("matrix"),ctx=c.getContext("2d");
+c.width=window.innerWidth;c.height=window.innerHeight;
+const letters="01 DREXHUB eFootball PUBG FF CODM 2026".split("");
+const fontSize=14;const columns=c.width/fontSize;
+const drops=[];for(let x=0;x<columns;x++)drops[x]=Math.random()* -20;
+function draw(){
+ctx.fillStyle="rgba(0,0,0,0.05)";ctx.fillRect(0,0,c.width,c.height);
+ctx.fillStyle="#00ff88";ctx.font=fontSize+"px monospace";
+for(let i=0;i<drops.length;i++){
+const text=letters[Math.floor(Math.random()*letters.length)];
+ctx.fillText(text,i*fontSize,drops[i]*fontSize);
+if(drops[i]*fontSize>c.height&&Math.random()>0.975)drops[i]=0;
+drops[i]++;
+}
+}
+setInterval(draw,33);
+window.onresize=()=>{c.width=innerWidth;c.height=innerHeight}
+</script>
+
 </body>
 </html>
