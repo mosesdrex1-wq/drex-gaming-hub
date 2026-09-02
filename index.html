@@ -9,24 +9,22 @@
 body{font-family:Arial;background:black;color:white;overflow-x:hidden}
 #matrix{position:fixed;top:0;left:0;width:100%;height:100%;z-index:-1;opacity:0.35}
 .content{position:relative;z-index:1;padding:15px}
-h1{text-align:center;color:#00ff88;text-shadow:0 0 15px #00ff88;margin-top:20px;font-size:30px}
-.subtitle{text-align:center;margin-bottom:20px;color:#00ff88}
-.games{display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:15px;max-width:950px;margin:0 auto}
-.card{background:rgba(20,20,20,0.92);border:1px solid #333;border-radius:15px;padding:12px;text-align:center;position:relative;overflow:hidden}
-.card img{width:100%;height:115px;object-fit:contain;background:#000;border-radius:10px;padding:5px}
-.card h2{font-size:15px;margin:10px 0 5px 0}
-.card p{font-size:12px;color:#aaa}
-.prize{background:linear-gradient(90deg,gold,#ffcc00);color:black;font-weight:bold;padding:4px 8px;border-radius:5px;font-size:11px;display:inline-block;margin:5px 0}
-.btn{display:block;padding:10px;border-radius:8px;text-decoration:none;font-weight:bold;margin-top:8px;font-size:13px;background:#00ff88;color:black}
-.efoot{border-color:#00aaff}.efoot.btn{background:#00aaff;color:white}
-.cod{border-color:gold}.cod.btn{background:gold;color:black}
-.ff{border-color:#ff3333}.ff.btn{background:#ff3333;color:white}
-.pubg{border-color:#f2a900}.ffmax{border-color:#00ff88}
-.footer{text-align:center;margin:35px 0 80px 0;color:#555;font-size:11px}
-#drex-bot{position:fixed;bottom:20px;right:20px;width:60px;height:60px;background:#00ff88;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:30px;box-shadow:0 0 20px #00ff88;cursor:pointer;z-index:999;animation:bounce 2s infinite}
-#drex-chat{position:fixed;bottom:90px;right:20px;width:310px;background:#1a1a1a;border:1px solid #00ff88;border-radius:15px;padding:15px;display:none;z-index:999}
+h1{text-align:center;color:#00ff88;text-shadow:0 0 15px #00ff88;margin-top:20px;font-size:28px}
+.subtitle{text-align:center;margin-bottom:20px;color:#aaa;font-size:13px}
+.games{display:grid;grid-template-columns:repeat(auto-fit,minmax(155px,1fr));gap:12px;max-width:950px;margin:0 auto}
+.card{background:rgba(22,22,22,0.95);border:1px solid #333;border-radius:15px;padding:12px;text-align:center}
+.card img{width:100%;height:110px;object-fit:contain;background:#000;border-radius:10px;padding:5px}
+.card h2{font-size:14px;margin:8px 0 3px 0}
+.card p{font-size:11px;color:#888}
+.entry{color:#aaa;font-size:11px;margin-top:4px}
+.prize{background:gold;color:black;font-weight:bold;padding:4px 8px;border-radius:20px;font-size:11px;display:inline-block;margin:6px 0}
+.btn{display:block;padding:10px;border-radius:8px;text-decoration:none;font-weight:bold;margin-top:6px;font-size:12px;background:#00ff88;color:black}
+.efoot{border-color:#00aaff}.efoot.prize{background:#00aaff;color:white}
+.footer{text-align:center;margin:35px 0 90px 0;color:#555;font-size:11px}
+#drex-bot{position:fixed;bottom:20px;right:20px;width:60px;height:60px;background:#00ff88;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:28px;box-shadow:0 0 20px #00ff88;cursor:pointer;z-index:999;animation:bounce 2s infinite}
+#drex-chat{position:fixed;bottom:90px;right:15px;width:310px;background:#1a1a1a;border:1px solid #00ff88;border-radius:15px;padding:15px;display:none;z-index:999;max-height:70vh;overflow-y:auto}
 @keyframes bounce{0%,100%{transform:translateY(0)}50%{transform:translateY(-10px)}}
-.chat-msg{background:#222;padding:10px;border-radius:10px;margin:8px 0;font-size:13px}
+.chat-msg{background:#222;padding:8px 10px;border-radius:10px;margin:6px 0;font-size:12px}
 </style>
 </head>
 <body>
@@ -35,73 +33,78 @@ h1{text-align:center;color:#00ff88;text-shadow:0 0 15px #00ff88;margin-top:20px;
 
 <div class="content">
 <h1>💚 DREX HUB 💚</h1>
-<p class="subtitle">DAILY PRIZE POOL • 8PM EAT</p>
+<p class="subtitle">Entry 2K - 3K • Win up to 10K • Daily 8PM EAT</p>
 
 <div class="games">
 
-<div class="card pubg">
+<div class="card">
 <img src="pubg.jpg">
 <h2>PUBG MOBILE</h2>
 <p>Squad • Daily 8PM</p>
-<div class="prize">🏆 Prize: 100K UGX</div>
-<a class="btn" href="https://wa.me/256745123623?text=JOIN%20PUBG%20DREX">JOIN NOW - 100K</a>
+<p class="entry">Entry: 2,000 UGX</p>
+<div class="prize">🏆 Prize: 5K UGX</div>
+<a class="btn" href="https://wa.me/256745123623?text=JOIN%20PUBG%20-%20Entry%202K%20Prize%205K">JOIN - 2K ENTRY</a>
 </div>
 
-<div class="card ff">
+<div class="card">
 <img src="freefire.jpg">
 <h2>FREE FIRE</h2>
 <p>Squad • Daily 8PM</p>
-<div class="prize">🏆 Prize: 50K UGX</div>
-<a class="btn" href="https://wa.me/256745123623?text=JOIN%20FF%20DREX">JOIN NOW - 50K</a>
+<p class="entry">Entry: 2,000 UGX</p>
+<div class="prize">🏆 Prize: 5K UGX</div>
+<a class="btn" href="https://wa.me/256745123623?text=JOIN%20FF%20-%20Entry%202K%20Prize%205K">JOIN - 2K ENTRY</a>
 </div>
 
-<div class="card ffmax">
+<div class="card">
 <img src="ffmax.jpg">
 <h2>FF MAX</h2>
 <p>High Graphics</p>
-<div class="prize">🏆 Prize: 50K UGX</div>
-<a class="btn" href="https://wa.me/256745123623?text=JOIN%20FFMAX%20DREX">JOIN NOW - 50K</a>
+<p class="entry">Entry: 2,000 UGX</p>
+<div class="prize">🏆 Prize: 5K UGX</div>
+<a class="btn" href="https://wa.me/256745123623?text=JOIN%20FFMAX%20-%20Entry%202K%20Prize%205K">JOIN - 2K ENTRY</a>
 </div>
 
 <div class="card efoot">
 <img src="efootball.jpg">
 <h2>eFootball™</h2>
 <p>1v1 • NEW!</p>
-<div class="prize">🏆 Prize: 30K UGX</div>
-<a class="btn" href="https://wa.me/256745123623?text=JOIN%20eFootball%20DREX">JOIN - 30K PRIZE</a>
+<p class="entry" style="color:#00aaff;font-weight:bold">Entry: 3,000 UGX</p>
+<div class="prize">🏆 Prize: 10K UGX</div>
+<a class="btn" style="background:#00aaff;color:white" href="https://wa.me/256745123623?text=JOIN%20eFootball%20-%20Entry%203K%20Prize%2010K">JOIN - 3K ENTRY</a>
 </div>
 
-<div class="card cod">
+<div class="card">
 <img src="codm.jpg">
 <h2>CODM</h2>
-<p>BR & MP • Daily 8PM</p>
-<div class="prize">🏆 Prize: 70K UGX</div>
-<a class="btn" href="https://wa.me/256745123623?text=JOIN%20CODM%20DREX">JOIN - 70K PRIZE</a>
+<p>BR & MP • Daily</p>
+<p class="entry">Entry: 2,000 UGX</p>
+<div class="prize">🏆 Prize: 5K UGX</div>
+<a class="btn" style="background:gold" href="https://wa.me/256745123623?text=JOIN%20CODM%20-%20Entry%202K%20Prize%205K">JOIN - 2K ENTRY</a>
 </div>
 
 </div>
-<p class="footer">WhatsApp: 0745123623 | DREX HUB 2026</p>
+<p class="footer">M-Pesa/Airtel Money: 0745123623 | mosesdrex1-wq.github.io</p>
 </div>
 
-<!-- BOT WITH PRIZE BUTTONS -->
+<!-- BOT WITH CORRECT PRIZES -->
 <div id="drex-bot" onclick="toggleBot()">🤖</div>
 <div id="drex-chat">
-<h3 style="color:#00ff88">DREX BOT 💚 Prize Info</h3>
-<div class="chat-msg">💰 Daily Prize Pools - Choose Game:</div>
-<div style="display:flex;flex-direction:column;gap:8px;margin-top:10px">
-<button onclick="goGame('PUBG - 100K Prize')" style="background:#f2a900;border:none;padding:10px;border-radius:8px;font-weight:bold;text-align:left">🎮 PUBG - 100K UGX 🏆</button>
-<button onclick="goGame('FF - 50K Prize')" style="background:#ff3333;color:white;border:none;padding:10px;border-radius:8px;font-weight:bold;text-align:left">🎮 FREE FIRE - 50K UGX 🏆</button>
-<button onclick="goGame('FF MAX - 50K Prize')" style="background:#00ff88;border:none;padding:10px;border-radius:8px;font-weight:bold;text-align:left">🎮 FF MAX - 50K UGX 🏆</button>
-<button onclick="goGame('eFootball - 30K Prize')" style="background:#00aaff;color:white;border:none;padding:10px;border-radius:8px;font-weight:bold;text-align:left">⚽ eFootball - 30K UGX 🏆</button>
-<button onclick="goGame('CODM - 70K Prize')" style="background:gold;border:none;padding:10px;border-radius:8px;font-weight:bold;text-align:left">🔫 CODM - 70K UGX 🏆</button>
+<h3 style="color:#00ff88">DREX BOT 💚</h3>
+<div class="chat-msg">💰 Entry Fee & Prize List:</div>
+<div style="display:flex;flex-direction:column;gap:7px;margin-top:8px">
+<button onclick="goGame('PUBG Entry 2K Prize 5K')" style="background:#333;border:1px solid #f2a900;color:white;padding:10px;border-radius:8px;text-align:left;font-size:12px">🎮 PUBG<br><b>Entry 2K → Prize 5K</b></button>
+<button onclick="goGame('FF Entry 2K Prize 5K')" style="background:#333;border:1px solid #ff3333;color:white;padding:10px;border-radius:8px;text-align:left;font-size:12px">🎮 FREE FIRE<br><b>Entry 2K → Prize 5K</b></button>
+<button onclick="goGame('FF MAX Entry 2K Prize 5K')" style="background:#333;border:1px solid #00ff88;color:white;padding:10px;border-radius:8px;text-align:left;font-size:12px">🎮 FF MAX<br><b>Entry 2K → Prize 5K</b></button>
+<button onclick="goGame('eFootball Entry 3K Prize 10K')" style="background:#003366;border:1px solid #00aaff;color:white;padding:10px;border-radius:8px;text-align:left;font-size:12px">⚽ eFootball (BEST)<br><b>Entry 3K → Prize 10K</b></button>
+<button onclick="goGame('CODM Entry 2K Prize 5K')" style="background:#333;border:1px solid gold;color:white;padding:10px;border-radius:8px;text-align:left;font-size:12px">🔫 CODM<br><b>Entry 2K → Prize 5K</b></button>
 </div>
-<div class="chat-msg" style="margin-top:10px">👇 Tap any prize button to JOIN on WhatsApp!</div>
+<div class="chat-msg" style="margin-top:10px">👇 Tap to JOIN on WhatsApp!</div>
 </div>
 
 <script>
 const c=document.getElementById("matrix"),ctx=c.getContext("2d");
 c.width=innerWidth;c.height=innerHeight;
-const letters="01 DREXHUB PRIZE 100K 50K 30K 70K".split("");
+const letters="01 2K 3K 5K 10K DREX".split("");
 const drops=[];for(let i=0;i<c.width/14;i++)drops[i]=Math.random()*-20;
 function draw(){ctx.fillStyle="rgba(0,0,0,0.05)";ctx.fillRect(0,0,c.width,c.height);ctx.fillStyle="#00ff88";ctx.font="14px monospace";for(let i=0;i<drops.length;i++){ctx.fillText(letters[Math.floor(Math.random()*letters.length)],i*14,drops[i]*14);if(drops[i]*14>c.height&&Math.random()>0.975)drops[i]=0;drops[i]++;}}
 setInterval(draw,33);
