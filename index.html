@@ -3,114 +3,30 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>DREX HUB - UG Gaming</title>
+<title>DREX HUB - UG Gaming Tournaments</title>
 <style>
 *{margin:0;padding:0;box-sizing:border-box}
 body{font-family:Arial;background:black;color:white;overflow-x:hidden}
 #matrix{position:fixed;top:0;left:0;width:100%;height:100%;z-index:-1;opacity:0.35}
 .content{position:relative;z-index:1;padding:15px}
-h1{text-align:center;color:#00ff88;text-shadow:0 0 15px #00ff88;margin-top:20px;font-size:28px}
-.subtitle{text-align:center;margin-bottom:20px;color:#aaa;font-size:13px}
+h1{text-align:center;color:#00ff88;text-shadow:0 0 15px #00ff88;margin-top:20px;font-size:32px}
 .games{display:grid;grid-template-columns:repeat(auto-fit,minmax(155px,1fr));gap:12px;max-width:950px;margin:0 auto}
 .card{background:rgba(22,22,22,0.95);border:1px solid #333;border-radius:15px;padding:12px;text-align:center}
-.card img{width:100%;height:110px;object-fit:contain;background:#000;border-radius:10px;padding:5px}
-.card h2{font-size:14px;margin:8px 0 3px 0}
-.card p{font-size:11px;color:#888}
-.entry{color:#aaa;font-size:11px;margin-top:4px}
-.prize{background:gold;color:black;font-weight:bold;padding:4px 8px;border-radius:20px;font-size:11px;display:inline-block;margin:6px 0}
-.btn{display:block;padding:10px;border-radius:8px;text-decoration:none;font-weight:bold;margin-top:6px;font-size:12px;background:#00ff88;color:black}
-.efoot{border-color:#00aaff}.efoot.prize{background:#00aaff;color:white}
-.footer{text-align:center;margin:35px 0 90px 0;color:#555;font-size:11px}
-#drex-bot{position:fixed;bottom:20px;right:20px;width:60px;height:60px;background:#00ff88;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:28px;box-shadow:0 0 20px #00ff88;cursor:pointer;z-index:999;animation:bounce 2s infinite}
-#drex-chat{position:fixed;bottom:90px;right:15px;width:310px;background:#1a1a1a;border:1px solid #00ff88;border-radius:15px;padding:15px;display:none;z-index:999;max-height:70vh;overflow-y:auto}
-@keyframes bounce{0%,100%{transform:translateY(0)}50%{transform:translateY(-10px)}}
-.chat-msg{background:#222;padding:8px 10px;border-radius:10px;margin:6px 0;font-size:12px}
+.card:hover{border-color:#00ff88;transform:translateY(-5px)}
+.prize{background:gold;color:black;font-weight:bold;padding:4px 10px;border-radius:20px;font-size:11px;display:inline-block;margin:6px 0}
+.btn{display:block;padding:10px;border-radius:8px;text-decoration:none;font-weight:bold;margin-top:8px;font-size:12px;background:#00ff88;color:black;text-align:center}
+.payment{background:rgba(0,255,136,0.1);border:1px solid #00ff88;border-radius:15px;padding:15px;text-align:center;max-width:500px;margin:25px auto}
 </style>
 </head>
 <body>
-
 <canvas id="matrix"></canvas>
-
 <div class="content">
 <h1>💚 DREX HUB 💚</h1>
-<p class="subtitle">Entry 2K - 3K • Win up to 10K • Daily 8PM EAT</p>
-
-<div class="games">
-
-<div class="card">
-<img src="pubg.jpg">
-<h2>PUBG MOBILE</h2>
-<p>Squad • Daily 8PM</p>
-<p class="entry">Entry: 2,000 UGX</p>
-<div class="prize">🏆 Prize: 5K UGX</div>
-<a class="btn" href="https://wa.me/256745123623?text=JOIN%20PUBG%20-%20Entry%202K%20Prize%205K">JOIN - 2K ENTRY</a>
+<p style="text-align:center;color:#aaa">Entry 2K-3K • Win up to 10K • Daily 8PM • Airtel 0745123623</p>
+<!-- YOUR GAME CARDS HERE - USE THE FILE I GENERATED -->
 </div>
-
-<div class="card">
-<img src="freefire.jpg">
-<h2>FREE FIRE</h2>
-<p>Squad • Daily 8PM</p>
-<p class="entry">Entry: 2,000 UGX</p>
-<div class="prize">🏆 Prize: 5K UGX</div>
-<a class="btn" href="https://wa.me/256745123623?text=JOIN%20FF%20-%20Entry%202K%20Prize%205K">JOIN - 2K ENTRY</a>
-</div>
-
-<div class="card">
-<img src="ffmax.jpg">
-<h2>FF MAX</h2>
-<p>High Graphics</p>
-<p class="entry">Entry: 2,000 UGX</p>
-<div class="prize">🏆 Prize: 5K UGX</div>
-<a class="btn" href="https://wa.me/256745123623?text=JOIN%20FFMAX%20-%20Entry%202K%20Prize%205K">JOIN - 2K ENTRY</a>
-</div>
-
-<div class="card efoot">
-<img src="efootball.jpg">
-<h2>eFootball™</h2>
-<p>1v1 • NEW!</p>
-<p class="entry" style="color:#00aaff;font-weight:bold">Entry: 3,000 UGX</p>
-<div class="prize">🏆 Prize: 10K UGX</div>
-<a class="btn" style="background:#00aaff;color:white" href="https://wa.me/256745123623?text=JOIN%20eFootball%20-%20Entry%203K%20Prize%2010K">JOIN - 3K ENTRY</a>
-</div>
-
-<div class="card">
-<img src="codm.jpg">
-<h2>CODM</h2>
-<p>BR & MP • Daily</p>
-<p class="entry">Entry: 2,000 UGX</p>
-<div class="prize">🏆 Prize: 5K UGX</div>
-<a class="btn" style="background:gold" href="https://wa.me/256745123623?text=JOIN%20CODM%20-%20Entry%202K%20Prize%205K">JOIN - 2K ENTRY</a>
-</div>
-
-</div>
-<p class="footer">M-Pesa/Airtel Money: 0745123623 | mosesdrex1-wq.github.io</p>
-</div>
-
-<!-- BOT WITH CORRECT PRIZES -->
-<div id="drex-bot" onclick="toggleBot()">🤖</div>
-<div id="drex-chat">
-<h3 style="color:#00ff88">DREX BOT 💚</h3>
-<div class="chat-msg">💰 Entry Fee & Prize List:</div>
-<div style="display:flex;flex-direction:column;gap:7px;margin-top:8px">
-<button onclick="goGame('PUBG Entry 2K Prize 5K')" style="background:#333;border:1px solid #f2a900;color:white;padding:10px;border-radius:8px;text-align:left;font-size:12px">🎮 PUBG<br><b>Entry 2K → Prize 5K</b></button>
-<button onclick="goGame('FF Entry 2K Prize 5K')" style="background:#333;border:1px solid #ff3333;color:white;padding:10px;border-radius:8px;text-align:left;font-size:12px">🎮 FREE FIRE<br><b>Entry 2K → Prize 5K</b></button>
-<button onclick="goGame('FF MAX Entry 2K Prize 5K')" style="background:#333;border:1px solid #00ff88;color:white;padding:10px;border-radius:8px;text-align:left;font-size:12px">🎮 FF MAX<br><b>Entry 2K → Prize 5K</b></button>
-<button onclick="goGame('eFootball Entry 3K Prize 10K')" style="background:#003366;border:1px solid #00aaff;color:white;padding:10px;border-radius:8px;text-align:left;font-size:12px">⚽ eFootball (BEST)<br><b>Entry 3K → Prize 10K</b></button>
-<button onclick="goGame('CODM Entry 2K Prize 5K')" style="background:#333;border:1px solid gold;color:white;padding:10px;border-radius:8px;text-align:left;font-size:12px">🔫 CODM<br><b>Entry 2K → Prize 5K</b></button>
-</div>
-<div class="chat-msg" style="margin-top:10px">👇 Tap to JOIN on WhatsApp!</div>
-</div>
-
 <script>
-const c=document.getElementById("matrix"),ctx=c.getContext("2d");
-c.width=innerWidth;c.height=innerHeight;
-const letters="01 2K 3K 5K 10K DREX".split("");
-const drops=[];for(let i=0;i<c.width/14;i++)drops[i]=Math.random()*-20;
-function draw(){ctx.fillStyle="rgba(0,0,0,0.05)";ctx.fillRect(0,0,c.width,c.height);ctx.fillStyle="#00ff88";ctx.font="14px monospace";for(let i=0;i<drops.length;i++){ctx.fillText(letters[Math.floor(Math.random()*letters.length)],i*14,drops[i]*14);if(drops[i]*14>c.height&&Math.random()>0.975)drops[i]=0;drops[i]++;}}
-setInterval(draw,33);
-function toggleBot(){const ch=document.getElementById('drex-chat');ch.style.display=ch.style.display==='block'?'none':'block'}
-function goGame(g){window.open(`https://wa.me/256745123623?text=JOIN%20${g}%20DREX%20HUB`,'_blank')}
+// matrix code...
 </script>
-
 </body>
 </html>
