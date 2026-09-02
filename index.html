@@ -7,22 +7,26 @@
 <style>
 *{margin:0;padding:0;box-sizing:border-box}
 body{font-family:Arial;background:black;color:white;overflow-x:hidden}
-#matrix{position:fixed;top:0;left:0;width:100%;height:100%;z-index:-1;opacity:0.4}
+#matrix{position:fixed;top:0;left:0;width:100%;height:100%;z-index:-1;opacity:0.35}
 .content{position:relative;z-index:1;padding:15px}
 h1{text-align:center;color:#00ff88;text-shadow:0 0 15px #00ff88;margin-top:20px;font-size:30px}
-.subtitle{text-align:center;margin-bottom:20px;color:#00ff88;letter-spacing:2px}
+.subtitle{text-align:center;margin-bottom:20px;color:#00ff88}
 .games{display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:15px;max-width:950px;margin:0 auto}
-.card{background:rgba(20,20,20,0.92);border:1px solid #333;border-radius:15px;padding:12px;text-align:center;backdrop-filter:blur(6px);box-shadow:0 0 10px rgba(0,255,136,0.2)}
+.card{background:rgba(20,20,20,0.92);border:1px solid #333;border-radius:15px;padding:12px;text-align:center;position:relative;overflow:hidden}
 .card img{width:100%;height:115px;object-fit:contain;background:#000;border-radius:10px;padding:5px}
 .card h2{font-size:15px;margin:10px 0 5px 0}
 .card p{font-size:12px;color:#aaa}
-.btn{display:block;padding:9px;border-radius:8px;text-decoration:none;font-weight:bold;margin-top:10px;font-size:13px}
-.pubg{border-color:#f2a900}.pubg.btn{background:#f2a900;color:black}
-.ffmax{border-color:#00ff88}.ffmax.btn{background:#00ff88;color:black}
-.ff{border-color:#ff3333}.ff.btn{background:#ff3333;color:white}
+.prize{background:linear-gradient(90deg,gold,#ffcc00);color:black;font-weight:bold;padding:4px 8px;border-radius:5px;font-size:11px;display:inline-block;margin:5px 0}
+.btn{display:block;padding:10px;border-radius:8px;text-decoration:none;font-weight:bold;margin-top:8px;font-size:13px;background:#00ff88;color:black}
 .efoot{border-color:#00aaff}.efoot.btn{background:#00aaff;color:white}
 .cod{border-color:gold}.cod.btn{background:gold;color:black}
-.footer{text-align:center;margin:35px 0 20px 0;color:#555;font-size:11px}
+.ff{border-color:#ff3333}.ff.btn{background:#ff3333;color:white}
+.pubg{border-color:#f2a900}.ffmax{border-color:#00ff88}
+.footer{text-align:center;margin:35px 0 80px 0;color:#555;font-size:11px}
+#drex-bot{position:fixed;bottom:20px;right:20px;width:60px;height:60px;background:#00ff88;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:30px;box-shadow:0 0 20px #00ff88;cursor:pointer;z-index:999;animation:bounce 2s infinite}
+#drex-chat{position:fixed;bottom:90px;right:20px;width:310px;background:#1a1a1a;border:1px solid #00ff88;border-radius:15px;padding:15px;display:none;z-index:999}
+@keyframes bounce{0%,100%{transform:translateY(0)}50%{transform:translateY(-10px)}}
+.chat-msg{background:#222;padding:10px;border-radius:10px;margin:8px 0;font-size:13px}
 </style>
 </head>
 <body>
@@ -31,69 +35,78 @@ h1{text-align:center;color:#00ff88;text-shadow:0 0 15px #00ff88;margin-top:20px;
 
 <div class="content">
 <h1>💚 DREX HUB 💚</h1>
-<p class="subtitle">DAILY TOURNAMENTS 8PM EAT • UGANDA #1</p>
+<p class="subtitle">DAILY PRIZE POOL • 8PM EAT</p>
 
 <div class="games">
 
 <div class="card pubg">
-<img src="pubg.jpg" alt="PUBG">
+<img src="pubg.jpg">
 <h2>PUBG MOBILE</h2>
 <p>Squad • Daily 8PM</p>
-<a class="btn" href="https://wa.me/256745123623?text=JOIN%20PUBG%20DREX">JOIN NOW</a>
+<div class="prize">🏆 Prize: 100K UGX</div>
+<a class="btn" href="https://wa.me/256745123623?text=JOIN%20PUBG%20DREX">JOIN NOW - 100K</a>
 </div>
 
 <div class="card ff">
-<img src="freefire.jpg" alt="Free Fire">
+<img src="freefire.jpg">
 <h2>FREE FIRE</h2>
 <p>Squad • Daily 8PM</p>
-<a class="btn" href="https://wa.me/256745123623?text=JOIN%20FF%20DREX">JOIN NOW</a>
+<div class="prize">🏆 Prize: 50K UGX</div>
+<a class="btn" href="https://wa.me/256745123623?text=JOIN%20FF%20DREX">JOIN NOW - 50K</a>
 </div>
 
 <div class="card ffmax">
-<img src="ffmax.jpg" alt="FF MAX">
+<img src="ffmax.jpg">
 <h2>FF MAX</h2>
-<p>High Graphics Battle</p>
-<a class="btn" href="https://wa.me/256745123623?text=JOIN%20FFMAX%20DREX">JOIN NOW</a>
+<p>High Graphics</p>
+<div class="prize">🏆 Prize: 50K UGX</div>
+<a class="btn" href="https://wa.me/256745123623?text=JOIN%20FFMAX%20DREX">JOIN NOW - 50K</a>
 </div>
 
 <div class="card efoot">
-<img src="efootball.jpg" alt="eFootball">
-<h2>eFootball™ KONAMI</h2>
+<img src="efootball.jpg">
+<h2>eFootball™</h2>
 <p>1v1 • NEW!</p>
-<a class="btn" href="https://wa.me/256745123623?text=JOIN%20eFootball%20DREX">JOIN eFootball</a>
+<div class="prize">🏆 Prize: 30K UGX</div>
+<a class="btn" href="https://wa.me/256745123623?text=JOIN%20eFootball%20DREX">JOIN - 30K PRIZE</a>
 </div>
 
 <div class="card cod">
-<img src="codm.jpg" alt="CODM">
-<h2>CALL OF DUTY MOBILE</h2>
+<img src="codm.jpg">
+<h2>CODM</h2>
 <p>BR & MP • Daily 8PM</p>
-<a class="btn" href="https://wa.me/256745123623?text=JOIN%20CODM%20DREX">JOIN CODM</a>
+<div class="prize">🏆 Prize: 70K UGX</div>
+<a class="btn" href="https://wa.me/256745123623?text=JOIN%20CODM%20DREX">JOIN - 70K PRIZE</a>
 </div>
 
 </div>
+<p class="footer">WhatsApp: 0745123623 | DREX HUB 2026</p>
+</div>
 
-<p class="footer">WhatsApp: 0745123623 | mosesdrex1-wq.github.io | DREX HUB 2026</p>
+<!-- BOT WITH PRIZE BUTTONS -->
+<div id="drex-bot" onclick="toggleBot()">🤖</div>
+<div id="drex-chat">
+<h3 style="color:#00ff88">DREX BOT 💚 Prize Info</h3>
+<div class="chat-msg">💰 Daily Prize Pools - Choose Game:</div>
+<div style="display:flex;flex-direction:column;gap:8px;margin-top:10px">
+<button onclick="goGame('PUBG - 100K Prize')" style="background:#f2a900;border:none;padding:10px;border-radius:8px;font-weight:bold;text-align:left">🎮 PUBG - 100K UGX 🏆</button>
+<button onclick="goGame('FF - 50K Prize')" style="background:#ff3333;color:white;border:none;padding:10px;border-radius:8px;font-weight:bold;text-align:left">🎮 FREE FIRE - 50K UGX 🏆</button>
+<button onclick="goGame('FF MAX - 50K Prize')" style="background:#00ff88;border:none;padding:10px;border-radius:8px;font-weight:bold;text-align:left">🎮 FF MAX - 50K UGX 🏆</button>
+<button onclick="goGame('eFootball - 30K Prize')" style="background:#00aaff;color:white;border:none;padding:10px;border-radius:8px;font-weight:bold;text-align:left">⚽ eFootball - 30K UGX 🏆</button>
+<button onclick="goGame('CODM - 70K Prize')" style="background:gold;border:none;padding:10px;border-radius:8px;font-weight:bold;text-align:left">🔫 CODM - 70K UGX 🏆</button>
+</div>
+<div class="chat-msg" style="margin-top:10px">👇 Tap any prize button to JOIN on WhatsApp!</div>
 </div>
 
 <script>
-// MATRIX RAIN - Original Effect Kept!
 const c=document.getElementById("matrix"),ctx=c.getContext("2d");
-c.width=window.innerWidth;c.height=window.innerHeight;
-const letters="01 DREXHUB eFootball PUBG FF CODM 2026".split("");
-const fontSize=14;const columns=c.width/fontSize;
-const drops=[];for(let x=0;x<columns;x++)drops[x]=Math.random()* -20;
-function draw(){
-ctx.fillStyle="rgba(0,0,0,0.05)";ctx.fillRect(0,0,c.width,c.height);
-ctx.fillStyle="#00ff88";ctx.font=fontSize+"px monospace";
-for(let i=0;i<drops.length;i++){
-const text=letters[Math.floor(Math.random()*letters.length)];
-ctx.fillText(text,i*fontSize,drops[i]*fontSize);
-if(drops[i]*fontSize>c.height&&Math.random()>0.975)drops[i]=0;
-drops[i]++;
-}
-}
+c.width=innerWidth;c.height=innerHeight;
+const letters="01 DREXHUB PRIZE 100K 50K 30K 70K".split("");
+const drops=[];for(let i=0;i<c.width/14;i++)drops[i]=Math.random()*-20;
+function draw(){ctx.fillStyle="rgba(0,0,0,0.05)";ctx.fillRect(0,0,c.width,c.height);ctx.fillStyle="#00ff88";ctx.font="14px monospace";for(let i=0;i<drops.length;i++){ctx.fillText(letters[Math.floor(Math.random()*letters.length)],i*14,drops[i]*14);if(drops[i]*14>c.height&&Math.random()>0.975)drops[i]=0;drops[i]++;}}
 setInterval(draw,33);
-window.onresize=()=>{c.width=innerWidth;c.height=innerHeight}
+function toggleBot(){const ch=document.getElementById('drex-chat');ch.style.display=ch.style.display==='block'?'none':'block'}
+function goGame(g){window.open(`https://wa.me/256745123623?text=JOIN%20${g}%20DREX%20HUB`,'_blank')}
 </script>
 
 </body>
