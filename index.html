@@ -3,118 +3,59 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>DREX GAMING HUB</title>
+<title>DREX HUB - UG Gaming</title>
 <style>
-body{margin:0;background:black;color:white;font-family:Arial;text-align:center;padding:20px;overflow-x:hidden}
-h1{color:#00ff00;text-shadow:0 0 15px #00ff00;font-size:32px;margin-top:40px}
-.card{background:rgba(20,20,20,0.9);border:1px solid #00ff00;border-radius:15px;padding:20px;margin:20px auto;max-width:400px;box-shadow:0 0 15px #00ff00}
-.btn{display:inline-block;background:#00ff00;color:black;padding:12px 25px;border-radius:25px;text-decoration:none;font-weight:bold;margin-top:10px}
-.btn:hover{background:white}
-#drexBot{position:fixed;bottom:20px;right:20px;z-index:9999}
-#botBtn{width:60px;height:60px;background:#00ff00;border-radius:50%;border:none;font-size:28px;box-shadow:0 0 15px #00ff00;cursor:pointer}
-#botBox{display:none;width:300px;height:380px;background:#111;border:1px solid #0f0;border-radius:15px;position:absolute;bottom:70px;right:0;overflow:hidden;flex-direction:column}
-#botHead{background:#00ff00;color:black;padding:10px;font-weight:bold;font-size:14px}
-#botMsgs{flex:1;padding:10px;overflow-y:auto;text-align:left;font-size:13px}
-.botMsg{background:#222;margin:6px 0;padding:8px 10px;border-radius:10px}
-.userMsg{background:#00ff00;color:black;text-align:right;margin-left:30px}
-#botInput{display:flex;border-top:1px solid #0f0}
-#botInput input{flex:1;background:black;color:white;border:none;padding:10px;outline:none}
-#botInput button{background:#0f0;border:none;padding:10px 15px;font-weight:bold;cursor:pointer}
+body{background:#0f0f0f;color:white;font-family:Arial;padding:15px;margin:0}
+h1{text-align:center;color:#00ff88}
+.games{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:15px}
+.card{background:#1c1c1c;border-radius:15px;padding:15px;border:1px solid #333;text-align:center}
+.card img{width:100%;height:150px;object-fit:cover;border-radius:10px}
+.card h2{margin:10px 0 5px 0}
+.btn{display:block;background:#00ff88;color:black;padding:10px;border-radius:8px;text-decoration:none;font-weight:bold;margin-top:10px}
+.cod{border-color:gold}.pubg{border-color:orange}.ff{border-color:red}.efoot{border-color:#00aaff}
 </style>
 </head>
 <body>
-<canvas id="matrix" style="position:fixed;top:0;left:0;width:100%;height:100%;z-index:-1;"></canvas>
+<h1>💚 DREX HUB 💚</h1>
+<p style="text-align:center">Daily Tournaments 8PM EAT - Uganda's #1</p>
 
-<h1>🔥 DREX GAMING HUB 🔥</h1>
-<p>Uganda's Hottest Gaming Zone</p>
+<div class="games">
 
-<div class="card">
-<h2>🎮 PUBG / FREE FIRE TOURNAMENT</h2>
-<p>Entry: <b>Only 2K UGX</b></p>
-<p>Prize: Big Cash + Airtime</p>
-<a class="btn" href="https://wa.me/256745123623?text=I%20want%20to%20join%20DREX%20tournament">JOIN ON WHATSAPP</a>
+<div class="card pubg">
+<img src="pubg.jpg" alt="PUBG">
+<h2>PUBG MOBILE</h2>
+<p>Squad • Daily 8PM</p>
+<a class="btn" href="https://wa.me/256745123623?text=JOIN%20PUBG">JOIN NOW</a>
 </div>
 
-<div class="card">
-<h2>📞 Contact</h2>
-<p>WhatsApp: 0745123623</p>
-<p>Link: mosesdrex1-wq.github.io</p>
-<p style="font-size:12px;color:#0f0">FIRST 10 PLAYERS ONLY! • DAILY 8PM EAT</p>
+<div class="card ff">
+<img src="freefire.jpg" alt="Free Fire">
+<h2>FREE FIRE</h2>
+<p>Squad • Daily 8PM</p>
+<a class="btn" href="https://wa.me/256745123623?text=JOIN%20FF">JOIN NOW</a>
 </div>
 
-<!-- BOT - FRIENDLY VERSION -->
-<div id="drexBot">
-<button id="botBtn" onclick="let b=document.getElementById('botBox');b.style.display=b.style.display=='flex'?'none':'flex'">💬</button>
-<div id="botBox">
-<div id="botHead">DREX BOT — 24/7 🤖</div>
-<div id="botMsgs"><div class="botMsg">Heyy! I'm Drex Bot 💚 Your 24/7 gaming plug! Just say hi 😎</div></div>
-<div id="botInput"><input id="userIn" placeholder="Type..."><button onclick="sendMsg()">Send</button></div>
-</div>
+<div class="card ff">
+<img src="ffmax.jpg" alt="FF Max">
+<h2>FF MAX</h2>
+<p>High Graphics Battle</p>
+<a class="btn" href="https://wa.me/256745123623?text=JOIN%20FFMAX">JOIN NOW</a>
 </div>
 
-<script>
-// MATRIX RAIN - SAME, NOT TOUCHED
-const canvas=document.getElementById('matrix');
-const ctx=canvas.getContext('2d');
-canvas.height=window.innerHeight;
-canvas.width=window.innerWidth;
-const letters="01DREX";
-const fontSize=14;
-const columns=canvas.width/fontSize;
-const drops=[];
-for(let x=0;x<columns;x++) drops[x]=1;
-function draw(){
-ctx.fillStyle="rgba(0,0,0,0.05)";
-ctx.fillRect(0,0,canvas.width,canvas.height);
-ctx.fillStyle="#0F0";
-ctx.font=fontSize+"px monospace";
-for(let i=0;i<drops.length;i++){
-const text=letters[Math.floor(Math.random()*letters.length)];
-ctx.fillText(text,i*fontSize,drops[i]*fontSize);
-if(drops[i]*fontSize>canvas.height && Math.random()>0.975) drops[i]=0;
-drops[i]++;
-}
-}
-setInterval(draw,33);
-window.addEventListener('resize',()=>{canvas.width=window.innerWidth;canvas.height=window.innerHeight;});
+<div class="card efoot">
+<img src="efootball.jpg" alt="eFootball">
+<h2>eFootball™ KONAMI</h2>
+<p>1v1 • NEW!</p>
+<a class="btn" style="background:#00aaff" href="https://wa.me/256745123623?text=JOIN%20eFootball">JOIN eFootball</a>
+</div>
 
-// BOT LOGIC - FRIENDLY VERSION
-function sendMsg(){
-let input=document.getElementById('userIn');
-let txt=input.value.trim();
-if(!txt) return;
-let lower=txt.toLowerCase();
-let msgs=document.getElementById('botMsgs');
-msgs.innerHTML+=`<div class="botMsg userMsg">${txt}</div>`;
-let reply="";
-if(lower.includes('hi')||lower.includes('hey')||lower.includes('hello')||lower.includes('yo')||lower.includes('sup')){
-  reply="Heyy boss! 👋 Welcome to DREX HUB 💚 I'm Drex Bot — your gaming plug! What you wanna know? (fee, prize, how to join?)";
-}
-else if(lower.includes('fee')||lower.includes('2k')||lower.includes('price')||lower.includes('how much')){
-  reply="Just 2K UGX only bro! 💸 Super cheap. Send to 0745123623 MTN MoMo then send screenshot. I'll add you instantly ✅";
-}
-else if(lower.includes('join')||lower.includes('play')||lower.includes('add me')){
-  reply="Let's get you in! 🔥 1) Send 2K to 0745123623 2) Screenshot 3) I add you to tourney group. Easy! You playing PUBG or Free Fire?";
-}
-else if(lower.includes('prize')||lower.includes('win')||lower.includes('earn')){
-  reply="Prize is BIG! 💰 If we are 5 players, winner takes 5K. More players = more cash! Last week winner took 15K 😎";
-}
-else if(lower.includes('time')||lower.includes('when')||lower.includes('today')){
-  reply="We play daily at 8PM EAT ⏰ Lobby opens 7:45PM. Pay before 7PM to secure slot, only 10 slots left today!";
-}
-else if(lower.includes('pubg')||lower.includes('free fire')||lower.includes('ff')){
-  reply="We got both! 🎮 PUBG and Free Fire — which one you crack? I'll put you in that group.";
-}
-else if(lower.includes('scam')||lower.includes('trust')||lower.includes('fake')){
-  reply="No scam here bro, 100% legit ✅ Check our site, we have real players daily. Pay 2K, you play. Win = instant MoMo. I can show you past winners if you want!";
-}
-else {
-  reply="Haha I got you! 😅 Just tell me: you wanna JOIN, know the FEE, PRIZE, or TIME? Type one and I got you 💚 Or tap WhatsApp button to talk to Drex directly!";
-}
-msgs.innerHTML+=`<div class="botMsg">${reply}</div>`;
-input.value=""; msgs.scrollTop=msgs.scrollHeight;
-}
-document.getElementById('userIn').addEventListener('keypress',e=>{if(e.key==='Enter') sendMsg()});
-</script>
+<div class="card cod">
+<img src="codm.jpg" alt="CODM">
+<h2>CODM</h2>
+<p>Coming Soon!</p>
+<a class="btn" style="background:gold" href="#">SOON</a>
+</div>
+
+</div>
 </body>
 </html>
