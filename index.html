@@ -3,224 +3,52 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>DREX HUB - Uganda #1 Gaming | Daily 8PM</title>
-<meta name="description" content="DREX HUB Uganda - Daily gaming tournaments 8PM. PUBG, Free Fire, CODM, DLS, eFootball. Entry 2K Win 5K. Airtel 0745123623">
+<title>DREX HUB - Uganda's #1 Daily Esports Tournaments | PUBG, Free Fire</title>
+<meta name="description" content="DREX HUB is Kampala's youth esports community. Daily 8PM tournaments for PUBG Mobile, Free Fire, CODM, DLS, eFootball. 2K entry win 5K. Join via WhatsApp 0745123623.">
+<meta name="keywords" content="DREX HUB Uganda, DREX HUB, Uganda Esports, PUBG Tournament Uganda, Free Fire Uganda, Kampala Gaming, Moses Drex">
+<meta property="og:title" content="DREX HUB - Uganda Esports">
+<meta property="og:description" content="Daily 8PM Gaming Tournaments in Uganda. Join now!">
+<link rel="icon" href="https://cdn-icons-png.flaticon.com/512/5969/5969006.png">
+
 <style>
-*{margin:0;padding:0;box-sizing:border-box;scroll-behavior:smooth}
-body{font-family:Arial,Helvetica,sans-serif;background:#020202;color:white;overflow-x:hidden}
-#matrix{position:fixed;inset:0;width:100%;height:100%;z-index:-2;opacity:.25}
-.overlay{position:fixed;inset:0;background:radial-gradient(circle at top,rgba(0,255,136,.08),transparent 45%);z-index:-1;pointer-events:none}
-.container{width:min(1100px,94%);margin:auto}
-nav{position:sticky;top:0;z-index:1000;background:rgba(0,0,0,.88);backdrop-filter:blur(12px);border-bottom:1px solid #173c2b}
-.nav-inner{min-height:65px;display:flex;align-items:center;justify-content:space-between;gap:15px}
-.logo{color:#00ff88;font-weight:900;font-size:20px;letter-spacing:2px;text-shadow:0 0 12px #00ff88}
-.nav-links{display:flex;gap:18px}
-.nav-links a{color:#aaa;text-decoration:none;font-size:12px;font-weight:bold}
-.nav-links a:hover{color:#00ff88}
-@media(max-width:700px){.nav-links{display:none}}
-.hero{text-align:center;padding:75px 15px 55px}
-.badge{display:inline-block;border:1px solid #00ff88;color:#00ff88;padding:7px 14px;border-radius:30px;font-size:11px;font-weight:bold;margin-bottom:18px;box-shadow:0 0 15px rgba(0,255,136,.12)}
-.hero h1{font-size:clamp(38px,9vw,76px);color:#00ff88;letter-spacing:5px;text-shadow:0 0 25px #00ff88}
-.hero h2{font-size:clamp(14px,3vw,22px);letter-spacing:5px;margin-top:10px}
-.hero p{max-width:650px;margin:18px auto;color:#aaa;line-height:1.7;font-size:14px}
-.buttons{display:flex;justify-content:center;gap:10px;flex-wrap:wrap;margin-top:25px}
-.btn{display:inline-block;text-decoration:none;padding:13px 20px;border-radius:10px;font-size:12px;font-weight:900;background:#00ff88;color:#000;transition:.2s;text-align:center}
-.btn:hover{transform:translateY(-2px);box-shadow:0 0 20px #00ff88}
-.btn-outline{background:transparent;color:#00ff88;border:1px solid #00ff88}
-.stats{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin:10px auto 45px}
-.stat{background:#0c0c0c;border:1px solid #222;border-radius:15px;padding:18px 8px;text-align:center}
-.stat strong{display:block;color:#00ff88;font-size:22px}
-.stat span{color:#777;font-size:10px}
-@media(max-width:600px){.stats{grid-template-columns:repeat(2,1fr)}}
-section{padding:45px 0}
-.section-title{text-align:center;margin-bottom:25px}
-.section-title h2{color:#00ff88;font-size:25px;letter-spacing:2px}
-.section-title p{color:#777;font-size:11px;margin-top:7px}
-.games{display:grid;grid-template-columns:repeat(2,1fr);gap:15px}
-.card{background:rgba(15,15,15,.95);border:1px solid #292929;border-radius:18px;padding:12px;overflow:hidden;transition:.25s}
-.card:hover{border-color:#00ff88;transform:translateY(-3px);box-shadow:0 0 25px rgba(0,255,136,.08)}
-.card img{width:100%;height:145px;object-fit:cover;border-radius:13px;background:#111}
-.card-content{padding:8px 3px 3px}
-.card h3{margin:6px 0;font-size:16px}
-.entry{color:#888;font-size:11px}
-.prize{display:inline-block;margin:8px 0;padding:5px 10px;background:#ffd900;color:#000;border-radius:20px;font-size:10px;font-weight:900}
-.status{float:right;color:#00ff88;border:1px solid #00ff88;padding:4px 7px;border-radius:20px;font-size:9px;font-weight:bold}
-@media(max-width:600px){.games{grid-template-columns:1fr}}
-.table-wrap{overflow-x:auto;background:#0b0b0b;border:1px solid #222;border-radius:15px}
-table{width:100%;border-collapse:collapse;min-width:500px}
-th,td{padding:14px 12px;text-align:left;border-bottom:1px solid #222;font-size:11px}
-th{color:#00ff88;background:#101010}
-td{color:#bbb}
-.open{color:#00ff88;font-weight:bold}
-.rules{display:grid;grid-template-columns:repeat(2,1fr);gap:12px}
-.rule{background:#0c0c0c;border:1px solid #222;border-radius:14px;padding:17px}
-.rule strong{color:#00ff88;display:block;margin-bottom:7px}
-.rule p{color:#999;font-size:11px;line-height:1.6}
-@media(max-width:600px){.rules{grid-template-columns:1fr}}
-.payment{background:rgba(0,255,136,.06);border:1px solid #00ff88;border-radius:20px;padding:25px;text-align:center}
-.payment h2{color:#00ff88}
-.number{font-size:28px;color:#00ff88;font-weight:900;margin:12px 0}
-.community{text-align:center;background:#0b0b0b;border:1px solid #222;border-radius:20px;padding:30px 15px}
-.community p{color:#999;font-size:12px;max-width:600px;margin:10px auto 20px;line-height:1.7}
-footer{text-align:center;padding:40px 15px 100px;color:#555;font-size:10px;line-height:1.8}
-footer b{color:#00ff88}
-#drex-bot{position:fixed;right:18px;bottom:18px;width:60px;height:60px;border-radius:50%;background:#00ff88;color:#000;display:flex;align-items:center;justify-content:center;font-size:25px;font-weight:900;cursor:pointer;z-index:2000;box-shadow:0 0 25px rgba(0,255,136,.7)}
-#drex-chat{position:fixed;right:15px;bottom:90px;width:min(320px,90%);background:#111;border:1px solid #00ff88;border-radius:17px;padding:16px;display:none;z-index:2000;box-shadow:0 0 30px rgba(0,255,136,.15)}
-.chat-title{color:#00ff88;font-weight:bold;margin-bottom:10px}
-.chat-msg{background:#1b1b1b;padding:12px;border-radius:12px;color:#bbb;font-size:11px;line-height:1.7}
-.chat-btn{display:block;text-decoration:none;text-align:center;margin-top:8px;padding:10px;background:#00ff88;color:#000;border-radius:9px;font-size:11px;font-weight:bold}
+*{margin:0;padding:0;box-sizing:border-box;font-family:Arial,sans-serif}
+body{background:#0a0a0a;color:#fff}
+.hero{background:linear-gradient(135deg,#00ff88,#00ccff);padding:60px 20px;text-align:center;color:#000}
+.hero h1{font-size:42px;font-weight:900}
+.hero p{font-size:18px;margin:10px 0}
+.btn{display:inline-block;background:#000;color:#00ff88;padding:14px 28px;border-radius:30px;text-decoration:none;font-weight:bold;margin:10px}
+.games{padding:40px 20px;display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:15px}
+.card{background:#1a1a1a;padding:20px;border-radius:15px;text-align:center;border:1px solid #00ff88}
+.card h3{color:#00ff88}
+.pay{padding:30px 20px;background:#111;text-align:center}
+.pay-box{background:#00ff88;color:#000;padding:20px;border-radius:12px;display:inline-block;font-weight:bold}
+footer{padding:20px;text-align:center;color:#888;font-size:14px}
 </style>
 </head>
 <body>
-<canvas id="matrix"></canvas>
-<div class="overlay"></div>
-<nav>
-<div class="container nav-inner">
-<div class="logo">DREX HUB</div>
-<div class="nav-links">
-<a href="#home">HOME</a>
-<a href="#games">GAMES</a>
-<a href="#tournaments">TOURNAMENTS</a>
-<a href="#rules">RULES</a>
-<a href="#community">COMMUNITY</a>
-</div>
-</div>
-</nav>
 
-<header class="hero" id="home">
-<div class="container">
-<div class="badge">UGANDA GAMING COMMUNITY</div>
+<div class="hero">
 <h1>DREX HUB</h1>
-<h2>PLAY • COMPETE • DOMINATE</h2>
-<p>Welcome to DREX HUB — Uganda's #1 gaming tournaments. Daily 8PM EAT. Fair play, instant payout.</p>
-<div class="buttons">
-<a href="#tournaments" class="btn">VIEW TOURNAMENTS</a>
-<a href="https://wa.me/256745123623" class="btn btn-outline">JOIN COMMUNITY</a>
-</div>
-</div>
-</header>
-
-<div class="container stats">
-<div class="stat"><strong>5+</strong><span>GAMES</span></div>
-<div class="stat"><strong>8PM</strong><span>DAILY MATCHES</span></div>
-<div class="stat"><strong>UGX</strong><span>LOCAL PRIZES</span></div>
-<div class="stat"><strong>2026</strong><span>ESTABLISHED</span></div>
+<p>Uganda's Daily Esports Arena - Kampala</p>
+<p>🔥 PUBG • Free Fire • CODM • DLS • eFootball - Daily 8PM EAT</p>
+<a class="btn" href="https://wa.me/256745123623?text=Hi%20DREX%20HUB%20I%20want%20to%20join%20tonight's%20tournament">JOIN ON WHATSAPP</a>
+<a class="btn" href="https://www.tiktok.com/@drexesports">Follow @drexesports</a>
 </div>
 
-<section id="games">
-<div class="container">
-<div class="section-title"><h2>OUR GAMES</h2><p>Choose your battlefield</p></div>
 <div class="games">
-
-<div class="card">
-<img src="pubg.jpg" alt="PUBG Mobile" onerror="this.src='https://via.placeholder.com/300x145/111/00ff88?text=PUBG'">
-<div class="card-content"><span class="status">OPEN</span><h3>PUBG Mobile</h3><p class="entry">Entry: 2,000 UGX</p><div class="prize">WIN 5,000 UGX</div><a class="btn" href="https://wa.me/256745123623?text=Hi%20DREX%20I%20want%20to%20join%20PUBG%20Mobile%20tournament%202K">JOIN PUBG</a></div>
+<div class="card"><h3>PUBG Mobile</h3><p>2K Entry</p><p><b>WIN 5K</b></p></div>
+<div class="card"><h3>Free Fire</h3><p>2K Entry</p><p><b>WIN 5K</b></p></div>
+<div class="card"><h3>CODM</h3><p>2K Entry</p><p><b>WIN 5K</b></p></div>
+<div class="card"><h3>DLS 25</h3><p>2K Entry</p><p><b>WIN 5K</b></p></div>
+<div class="card"><h3>eFootball</h3><p>3K Entry</p><p><b>WIN 10K</b></p></div>
 </div>
 
-<div class="card">
-<img src="freefire.jpg" alt="Free Fire" onerror="this.src='https://via.placeholder.com/300x145/111/00ff88?text=Free+Fire'">
-<div class="card-content"><span class="status">OPEN</span><h3>Free Fire</h3><p class="entry">Entry: 2,000 UGX</p><div class="prize">WIN 5,000 UGX</div><a class="btn" href="https://wa.me/256745123623?text=Hi%20DREX%20I%20want%20to%20join%20Free%20Fire%20tournament%202K">JOIN FREE FIRE</a></div>
-</div>
-
-<div class="card">
-<img src="codm.jpg" alt="CODM" onerror="this.src='https://via.placeholder.com/300x145/111/00ff88?text=CODM'">
-<div class="card-content"><span class="status">OPEN</span><h3>Call of Duty Mobile</h3><p class="entry">Entry: 2,000 UGX</p><div class="prize">WIN 5,000 UGX</div><a class="btn" href="https://wa.me/256745123623?text=Hi%20DREX%20I%20want%20to%20join%20CODM%20tournament%202K">JOIN CODM</a></div>
-</div>
-
-<div class="card">
-<img src="dls.jpg" alt="Dream League" onerror="this.src='https://via.placeholder.com/300x145/111/00ff88?text=DLS'">
-<div class="card-content"><span class="status">OPEN</span><h3>Dream League (DLS)</h3><p class="entry">Entry: 2,000 UGX</p><div class="prize">WIN 5,000 UGX</div><a class="btn" href="https://wa.me/256745123623?text=Hi%20DREX%20I%20want%20to%20join%20DLS%20tournament%202K">JOIN DLS</a></div>
-</div>
-
-<div class="card" style="border-color:#00aaff">
-<img src="efootball.jpg" alt="eFootball" onerror="this.src='https://via.placeholder.com/300x145/111/00aaff?text=eFootball'">
-<div class="card-content"><span class="status" style="color:#00aaff;border-color:#00aaff">HOT</span><h3>eFootball 2026</h3><p class="entry">Entry: 3,000 UGX</p><div class="prize" style="background:#00aaff;color:white">WIN 10,000 UGX</div><a class="btn" style="background:#00aaff;color:white" href="https://wa.me/256745123623?text=Hi%20DREX%20I%20want%20to%20join%20eFootball%20tournament%203K">JOIN eFOOTBALL</a></div>
-</div>
-
-</div>
-</div>
-</section>
-
-<section id="tournaments">
-<div class="container">
-<div class="section-title"><h2>TOURNAMENTS</h2><p>Daily 8PM EAT - All games</p></div>
-<div class="table-wrap">
-<table>
-<tr><th>GAME</th><th>ENTRY</th><th>PRIZE</th><th>TIME</th><th>STATUS</th></tr>
-<tr><td>PUBG Mobile</td><td>2K</td><td>5K</td><td>8:00 PM</td><td class="open">OPEN</td></tr>
-<tr><td>Free Fire</td><td>2K</td><td>5K</td><td>8:00 PM</td><td class="open">OPEN</td></tr>
-<tr><td>CODM</td><td>2K</td><td>5K</td><td>8:00 PM</td><td class="open">OPEN</td></tr>
-<tr><td>Dream League (DLS)</td><td>2K</td><td>5K</td><td>8:00 PM</td><td class="open">OPEN</td></tr>
-<tr><td>eFootball</td><td>3K</td><td>10K</td><td>8:00 PM</td><td class="open">OPEN</td></tr>
-</table>
-</div>
-</div>
-</section>
-
-<section id="rules">
-<div class="container">
-<div class="section-title"><h2>TOURNAMENT RULES</h2><p>Play fair. Respect everyone.</p></div>
-<div class="rules">
-<div class="rule"><strong>01 • FAIR PLAY</strong><p>No cheating, hacks, exploits or unfair advantages.</p></div>
-<div class="rule"><strong>02 • PAYMENT</strong><p>Players must complete payment before their slot is confirmed.</p></div>
-<div class="rule"><strong>03 • MATCH TIME</strong><p>Be ready 10 mins before 8PM. Late = disqualify.</p></div>
-<div class="rule"><strong>04 • PROOF</strong><p>Screenshot your win and send to admin on WhatsApp.</p></div>
-<div class="rule"><strong>05 • RESPECT</strong><p>Insults and harassment not allowed.</p></div>
-<div class="rule"><strong>06 • ADMIN DECISION</strong><p>Admin decision is final based on evidence.</p></div>
-</div>
-</div>
-</section>
-
-<section>
-<div class="container">
-<div class="payment">
-<h2>JOIN A TOURNAMENT</h2>
-<p style="color:#999;margin-top:8px;font-size:12px">Pay your entry fee through Airtel Money</p>
-<div class="number">0745123623</div>
-<p style="color:#00ff88;font-size:14px;font-weight:900">Namukose Janifer (DREX HUB)</p>
-<p style="color:#666;font-size:10px;margin:8px 0 15px">Airtel Money name will show as Namukose Janifer - it's official DREX HUB account</p>
-<a class="btn" href="https://wa.me/256745123623?text=Hi%20DREX%20I%20have%20paid%20my%20entry%20fee%2C%20here%20is%20my%20screenshot">SEND PAYMENT PROOF</a>
-</div>
-</div>
-</section>
-
-<section id="community">
-<div class="container">
-<div class="community">
-<div class="section-title" style="margin-bottom:5px"><h2>JOIN THE COMMUNITY</h2></div>
-<p>Meet gamers, find opponents, join tournaments and stay updated with DREX HUB events.</p>
-<div class="buttons">
-<a class="btn" href="https://wa.me/256745123623">WHATSAPP</a>
-<a class="btn btn-outline" href="https://www.tiktok.com/@drexesports">TIKTOK</a>
-</div>
-</div>
-</div>
-</section>
-
-<footer>
-<p><b>DREX HUB</b><br>PLAY • COMPETE • DOMINATE</p>
-<p>Uganda - Daily Tournaments 8PM EAT<br>Fair Play • Instant Payout</p>
-<p>WhatsApp: 0745123623<br>TikTok: @drexesports<br>Airtel Money: Namukose Janifer (0745123623)</p>
-<p style="margin-top:10px">© 2026 DREX HUB. All Rights Reserved.</p>
-</footer>
-
-<div id="drex-bot" onclick="toggleBot()">D</div>
-<div id="drex-chat">
-<div class="chat-title">DREX BOT</div>
-<div class="chat-msg">Welcome to DREX HUB!<br><br>PUBG / Free Fire / CODM / DLS<br>Entry: 2K • Win: 5K<br><br>eFootball<br>Entry: 3K • Win: 10K<br><br>Daily: 8PM EAT<br>Pay to: 0745123623<br>Namukose Janifer</div>
-<a class="chat-btn" href="#tournaments">VIEW TOURNAMENTS</a>
-<a class="chat-btn" href="https://wa.me/256745123623">CONTACT ADMIN</a>
-</div>
-
-<script>
-const canvas=document.getElementById("matrix");const ctx=canvas.getContext("2d");
-function resizeCanvas(){canvas.width=window.innerWidth;canvas.height=window.innerHeight}
-resizeCanvas();let fontSize=14;let columns=Math.floor(canvas.width/fontSize);let drops=new Array(columns).fill(1);
-function matrix(){ctx.fillStyle="rgba(0,0,0,0.08)";ctx.fillRect(0,0,canvas.width,canvas.height);ctx.fillStyle="#00ff88";ctx.font=fontSize+"px monospace";for(let i=0;i<drops.length;i++){const text=Math.random()>0.5?"1":"0";ctx.fillText(text,i*fontSize,drops[i]*fontSize);if(drops[i]*fontSize>canvas.height&&Math.random()>0.975){drops[i]=0}drops[i]++}}
-setInterval(matrix,40);
-window.addEventListener("resize",()=>{resizeCanvas();columns=Math.floor(canvas.width/fontSize);drops=new Array(columns).fill(1)});
-function toggleBot(){const chat=document.getElementById("drex-chat");chat.style.display=chat.style.display==="block"?"none":"block"}
-document.addEventListener("click",function(e){const bot=document.getElementById("drex-bot");const chat=document.getElementById("drex-chat");if(!bot.contains(e.target)&&!chat.contains(e.target)){chat.style.display="none"}});
-</script>
-</body>
-</html>
+<div class="pay">
+<h2>How To Join Tonight 8PM</h2><br>
+<p>1. Send entry fee to Airtel Money</p><br>
+<div class="pay-box">
+Airtel: 0745123623<br>
+Name: Namukose Janifer
+</div><br><br>
+<p>2. Screenshot payment + Send your Game Name on WhatsApp</p><br>
+<p>3. We add you to lobby
