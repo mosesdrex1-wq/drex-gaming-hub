@@ -3,70 +3,100 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>DREX HUB | Uganda's Premier Esports Arena</title>
-<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@700;900&family=Inter:wght@400;600&display=swap" rel="stylesheet">
+<title>DREX HUB | Uganda's Premier Esports Circuit</title>
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
 <style>
 *{margin:0;padding:0;box-sizing:border-box}
-body{background:#08080a;color:#fff;font-family:'Inter',sans-serif}
-.hero{background:radial-gradient(800px at 50% -10%, #00ff8855, transparent), linear-gradient(180deg, #0f1a14 0%, #08080a 100%);padding:70px 20px 40px;text-align:center;border-bottom:1px solid #ffffff10}
-.hero h1{font-family:'Orbitron';font-size:48px;font-weight:900;letter-spacing:3px;background:linear-gradient(90deg,#00ff88,#00ccff);-webkit-background-clip:text;-webkit-text-fill-color:transparent}
-.hero .tag{color:#888;margin:12px 0;font-size:13px;letter-spacing:4px;text-transform:uppercase}
-.hero .sub{color:#ccc;font-size:16px;margin-bottom:25px}
-.btn-main{display:inline-block;background:#fff;color:#000;padding:14px 32px;border-radius:100px;font-weight:800;text-decoration:none;margin:6px;font-family:'Orbitron';font-size:13px;letter-spacing:1px}
-.btn-ghost{display:inline-block;border:1px solid #ffffff30;color:#fff;padding:14px 32px;border-radius:100px;font-weight:600;text-decoration:none;margin:6px;font-size:13px}
-.section{max-width:1100px;margin:0 auto;padding:30px 15px}
-.section h2{font-family:'Orbitron';font-size:18px;letter-spacing:2px;margin-bottom:18px;color:#fff;display:flex;align-items:center;gap:10px}
-.section h2::before{content:'';width:4px;height:18px;background:#00ff88;display:inline-block;border-radius:2px}
-.grid{display:grid;grid-template-columns:1fr 1fr;gap:14px}
-.card{background:linear-gradient(180deg, #15151a 0%, #101014 100%);border:1px solid #ffffff12;border-radius:18px;padding:18px;text-align:left;display:flex;gap:14px;align-items:center;position:relative;overflow:hidden;transition:0.2s}
-.card:hover{border-color:#00ff8855;transform:translateY(-2px)}
-.card img{width:64px;height:64px;border-radius:12px;object-fit:cover;background:#000;flex-shrink:0}
-.card h3{font-family:'Orbitron';font-size:13px;letter-spacing:1px;color:#fff}
-.card .meta{font-size:11px;color:#888;margin-top:4px}
-.card .win{position:absolute;top:14px;right:14px;background:#00ff8815;color:#00ff88;border:1px solid #00ff8830;padding:4px 8px;border-radius:20px;font-size:10px;font-weight:800;letter-spacing:1px}
-.pay-card{background:linear-gradient(135deg,#00ff88 0%,#00ccff 100%);border-radius:20px;padding:2px;margin-top:20px}
-.pay-inner{background:#0e0e10;border-radius:18px;padding:24px;text-align:center}
-.pay-box{background:#fff;color:#000;padding:10px 20px;border-radius:12px;display:inline-block;font-weight:900;margin:12px 0;letter-spacing:0.5px}
-footer{border-top:1px solid #ffffff10;padding:30px;text-align:center;color:#555;font-size:11px;letter-spacing:1px}
-.live{width:8px;height:8px;background:#ff2a2a;border-radius:50%;display:inline-block;box-shadow:0 0 10px #ff2a2a;animation:pulse 1.5s infinite}
-@keyframes pulse{0%{opacity:1}50%{opacity:0.4}100%{opacity:1}}
+body{background:#070709;color:#fff;font-family:'Inter',sans-serif}
+:root{--neon:#CCFF00;--neon2:#00FF88}
+.topbar{display:flex;justify-content:space-between;align-items:center;padding:18px 22px;border-bottom:1px solid #1a1a1e;position:sticky;top:0;background:#070709ee;backdrop-filter:blur(12px);z-index:10}
+.logo{font-family:'Syne';font-weight:800;letter-spacing:1px;font-size:20px}
+.logo span{color:var(--neon)}
+.live{display:flex;align-items:center;gap:6px;background:#151519;border:1px solid #24242a;padding:6px 12px;border-radius:100px;font-size:11px;font-weight:600;letter-spacing:1px}
+.dot{width:7px;height:7px;background:#FF3B3B;border-radius:50%;box-shadow:0 0 10px #FF3B3B;animation:blink 1.5s infinite}
+@keyframes blink{50%{opacity:.3}}
+.hero{padding:56px 22px 30px}
+.hero h1{font-family:'Syne';font-size:52px;line-height:0.9;letter-spacing:-2px;font-weight:800}
+.hero h1 i{font-style:normal;color:var(--neon)}
+.hero p{color:#8a8a93;margin:18px 0 28px;max-width:380px;line-height:1.5;font-size:15px}
+.cta{display:flex;gap:10px;flex-wrap:wrap}
+.btn-primary{background:var(--neon);color:#000;padding:15px 26px;border-radius:100px;text-decoration:none;font-weight:800;font-size:13px;letter-spacing:.5px}
+.btn-secondary{background:#1a1a1e;border:1px solid #2a2a31;color:#fff;padding:15px 26px;border-radius:100px;text-decoration:none;font-weight:600;font-size:13px}
+.stats{display:grid;grid-template-columns:repeat(3,1fr);border-top:1px solid #1a1a1e;border-bottom:1px solid #1a1a1e}
+.stats div{padding:18px 22px;border-right:1px solid #1a1a1e}
+.stats div:last-child{border:none}
+.stats b{font-family:'Syne';font-size:20px;display:block}
+.stats span{font-size:11px;color:#8a8a93;letter-spacing:1px;text-transform:uppercase}
+.section{padding:32px 16px}
+.sec-head{display:flex;justify-content:space-between;align-items:center;margin-bottom:16px}
+.sec-head h2{font-family:'Syne';font-size:16px;letter-spacing:1px}
+.sec-head small{color:#8a8a93;font-size:11px}
+.grid{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.game{background:#121214;border:1px solid #1e1e24;border-radius:20px;padding:14px;position:relative;overflow:hidden}
+.game img{width:100%;height:88px;object-fit:cover;border-radius:12px;background:#000}
+.game h3{font-family:'Syne';font-size:12px;margin:12px 0 4px;letter-spacing:.5px}
+.game .row{display:flex;justify-content:space-between;align-items:center;margin-top:8px}
+.tag{font-size:10px;background:#1e1e24;padding:4px 8px;border-radius:100px;color:#8a8a93}
+.win{font-size:11px;font-weight:800;color:var(--neon)}
+.t-list{display:flex;flex-direction:column;gap:10px}
+.t-row{display:flex;align-items:center;gap:12px;background:#121214;border:1px solid #1e1e24;border-radius:16px;padding:12px 14px}
+.t-row img{width:48px;height:48px;border-radius:10px;object-fit:cover;background:#000}
+.t-row .mid{flex:1}
+.t-row .mid h4{font-size:13px;font-family:'Syne'}
+.t-row .mid p{font-size:11px;color:#8a8a93;margin-top:2px}
+.t-row .right{text-align:right}
+.t-row .right b{font-size:12px;color:var(--neon)}
+.t-row .right span{font-size:10px;color:#8a8a93;display:block}
+.pay-wrap{margin:20px 16px;background:#121214;border:1px solid #1e1e24;border-radius:20px;padding:20px;text-align:center}
+.pay-wrap h3{font-family:'Syne';font-size:14px}
+.merchant{margin:14px auto;background:#fff;color:#000;padding:12px 18px;border-radius:12px;display:inline-block;font-weight:800;font-size:13px;line-height:1.4}
+footer{padding:28px 16px;text-align:center;color:#5a5a65;font-size:10px;letter-spacing:1px;line-height:1.6}
 </style>
 </head>
 <body>
-
+<div class="topbar">
+<div class="logo">DREX<span>HUB</span></div>
+<div class="live"><div class="dot"></div> LIVE • KAMPALA</div>
+</div>
 <div class="hero">
-<h1>DREX HUB</h1>
-<div class="tag">Kampala • Uganda • East Africa</div>
-<p class="sub">Daily Competitive Lobbies • 8PM EAT • Prize Pool Paid Instantly</p>
-<div>
-<a class="btn-main" href="https://wa.me/256745123623">JOIN WHATSAPP</a>
-<a class="btn-ghost" href="https://www.tiktok.com/@drexesports">TIKTOK @drexesports</a>
+<h1>UGANDA'S<br><i>ELITE</i><br>ARENA.</h1>
+<p>Daily verified lobbies. Instant Airtel payouts. Built for pro players.</p>
+<div class="cta">
+<a class="btn-primary" href="https://wa.me/256745123623">JOIN TONIGHT 8PM</a>
+<a class="btn-secondary" href="https://www.tiktok.com/@drexesports">@drexesports</a>
 </div>
 </div>
-
+<div class="stats">
+<div><b>2,400+</b><span>Players</span></div>
+<div><b>UGX 5K-10K</b><span>Daily Prize</span></div>
+<div><b>8PM EAT</b><span>Everyday</span></div>
+</div>
 <div class="section">
-<h2><span class="live"></span> LIVE TOURNAMENTS TONIGHT</h2>
+<div class="sec-head"><h2>FEATURED TITLES</h2><small>05 ACTIVE</small></div>
 <div class="grid">
-<div class="card"><img src="pubg.jpg"><div><h3>PUBG MOBILE</h3><div class="meta">2K Entry • Solo • Erangel<br>Room: 7:50 PM EAT</div></div><div class="win">WIN 5K</div></div>
-<div class="card"><img src="freefire.jpg"><div><h3>FREE FIRE</h3><div class="meta">2K Entry • Clash Squad<br>Starts 8:30 PM EAT</div></div><div class="win">WIN 5K</div></div>
-<div class="card"><img src="codm.jpg"><div><h3>CALL OF DUTY MOBILE</h3><div class="meta">2K Entry • Battle Royale<br>15 Slots</div></div><div class="win">WIN 5K</div></div>
-<div class="card"><img src="ffmax.jpg"><div><h3>FF MAX</h3><div class="meta">2K Entry • BR Ranked<br>8:45 PM EAT</div></div><div class="win">WIN 5K</div></div>
-<div class="card" style="grid-column:span 2"><img src="efootball.jpg"><div><h3>EFOOTBALL 26 • 1V1 KNOCKOUT</h3><div class="meta">3K Entry • Finals 9:30 PM • Instant Payout via Airtel Money</div></div><div class="win">WIN 10K</div></div>
+<div class="game"><img src="pubg.jpg"><h3>PUBG MOBILE</h3><div class="row"><span class="tag">Solo • Erangel</span><span class="win">WIN 5K</span></div></div>
+<div class="game"><img src="freefire.jpg"><h3>FREE FIRE</h3><div class="row"><span class="tag">Clash Squad</span><span class="win">WIN 5K</span></div></div>
+<div class="game"><img src="codm.jpg"><h3>CODM</h3><div class="row"><span class="tag">BR • 15 Slots</span><span class="win">WIN 5K</span></div></div>
+<div class="game"><img src="ffmax.jpg"><h3>FF MAX</h3><div class="row"><span class="tag">BR Ranked</span><span class="win">WIN 5K</span></div></div>
 </div>
-
-<div class="pay-card">
-<div class="pay-inner">
-<h3 style="font-family:'Orbitron';font-size:14px;letter-spacing:2px">SECURED BY DREX PAY</h3>
-<p style="font-size:12px;color:#888;margin-top:6px">Official Airtel Money Merchant</p>
-<div class="pay-box">0745123623 • Namukose Janifer</div>
-<p style="font-size:11px;color:#aaa">Send screenshot + In-Game Name on WhatsApp after payment</p>
+</div>
+<div class="section" style="padding-top:0">
+<div class="sec-head"><h2>TODAY'S CIRCUIT</h2><small>TONIGHT 8PM EAT</small></div>
+<div class="t-list">
+<div class="t-row"><img src="pubg.jpg"><div class="mid"><h4>PUBG Mobile Solo</h4><p>Room 7:50 PM • Erangel</p></div><div class="right"><b>2K ENTRY</b><span>WIN 5K</span></div></div>
+<div class="t-row"><img src="freefire.jpg"><div class="mid"><h4>Free Fire Squad</h4><p>8:30 PM • Best of 3</p></div><div class="right"><b>2K ENTRY</b><span>WIN 5K</span></div></div>
+<div class="t-row"><img src="codm.jpg"><div class="mid"><h4>CODM Battle Royale</h4><p>9:00 PM • 15 Players</p></div><div class="right"><b>2K ENTRY</b><span>WIN 5K</span></div></div>
+<div class="t-row"><img src="efootball.jpg"><div class="mid"><h4>eFootball 26 Final</h4><p>9:30 PM • 1v1 Knockout</p></div><div class="right"><b>3K ENTRY</b><span>WIN 10K</span></div></div>
+</div>
+</div>
+<div class="pay-wrap">
+<h3>DREX SECURE PAY</h3>
+<p style="font-size:11px;color:#8a8a93;margin-top:4px">Verified Merchant • Instant Confirmation</p>
+<div class="merchant">Airtel Money: 0745123623<br>Namukose Janifer</div>
+<p style="font-size:11px;color:#8a8a93">Send screenshot + IGN on WhatsApp after payment</p>
 <br>
-<a class="btn-main" style="background:#00ff88" href="https://wa.me/256745123623?text=Hi%20DREX%20HUB%20I%20have%20paid">I HAVE PAID</a>
+<a class="btn-primary" href="https://wa.me/256745123623?text=Paid%20for%20tonight%20DREX">I HAVE PAID →</a>
 </div>
-</div>
-</div>
-
-<footer>DREX HUB © 2026 — FOUNDED BY MOSES DREX — KAMPALA, UGANDA<br>Designed for MTN Uganda x Drex Esports Partnership</footer>
-
+<footer>DREX HUB © 2026 • BUILT BY MOSES DREX • KAMPALA, UGANDA<br>UGANDA'S PREMIER ESPORTS CIRCUIT</footer>
 </body>
 </html>
