@@ -7,12 +7,13 @@
 <style>
 *{margin:0;padding:0;box-sizing:border-box}
 body{font-family:Arial;background:black;color:white;overflow-x:hidden}
-#matrix{position:fixed;top:0;left:0;width:100%;height:100%;z-index:-1;opacity:0.25}
+#matrix{position:fixed;top:0;left:0;width:100%;height:100%;z-index:-1;opacity:0.35}
 .content{position:relative;z-index:1;padding:15px}
-h1{text-align:center;color:#00ff88;text-shadow:0 0 15px #00ff88;margin-top:15px;font-size:30px}
-.subtitle{text-align:center;margin:6px 0 20px;color:#aaa;font-size:12px}
+h1{text-align:center;color:#00ff88;text-shadow:0 0 15px #00ff88;margin-top:15px;font-size:30px;letter-spacing:2px}
+.slogan{text-align:center;color:#00ff88;font-weight:bold;letter-spacing:3px;margin-top:8px;font-size:13px;text-shadow:0 0 8px #00ff88}
+.subtitle{text-align:center;margin:8px 0 20px;color:#aaa;font-size:11px}
 .games{display:grid;grid-template-columns:repeat(2,1fr);gap:12px;max-width:500px;margin:0 auto}
-.card{background:#161616;border:1px solid #333;border-radius:18px;padding:12px;text-align:center}
+.card{background:#161616;border:1px solid #333;border-radius:18px;padding:12px;text-align:center;transition:0.2s}
 .card:hover{border-color:#00ff88;transform:translateY(-3px)}
 .card img{width:100%;height:110px;object-fit:cover;border-radius:12px;background:#000}
 .card h2{font-size:14px;margin:8px 0 2px}
@@ -21,15 +22,16 @@ h1{text-align:center;color:#00ff88;text-shadow:0 0 15px #00ff88;margin-top:15px;
 .btn{display:block;padding:11px;border-radius:10px;text-decoration:none;font-weight:bold;margin-top:8px;font-size:12px;background:#00ff88;color:black;text-align:center}
 .payment{background:rgba(0,255,136,0.08);border:1.5px solid #00ff88;border-radius:18px;padding:16px;text-align:center;max-width:500px;margin:22px auto}
 .footer{text-align:center;margin:30px 0 90px;color:#555;font-size:11px;line-height:1.6}
-#drex-bot{position:fixed;bottom:20px;right:20px;width:58px;height:58px;background:#00ff88;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:26px;cursor:pointer;z-index:999;box-shadow:0 0 20px #00ff88}
+#drex-bot{position:fixed;bottom:20px;right:20px;width:58px;height:58px;background:#00ff88;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:22px;font-weight:bold;color:black;cursor:pointer;z-index:999;box-shadow:0 0 20px #00ff88}
 #drex-chat{position:fixed;bottom:90px;right:12px;width:300px;background:#1a1a1a;border:1.5px solid #00ff88;border-radius:15px;padding:14px;display:none;z-index:999}
-.chat-msg{background:#222;padding:10px;border-radius:10px;margin:6px 0;font-size:12px}
+.chat-msg{background:#222;padding:10px;border-radius:10px;margin:6px 0;font-size:12px;line-height:1.5}
 </style>
 </head>
 <body>
 <canvas id="matrix"></canvas>
 <div class="content">
-<h1>💚 DREX HUB 💚</h1>
+<h1>DREX HUB</h1>
+<p class="slogan">PLAY • COMPETE • DOMINATE</p>
 <p class="subtitle">Entry 2K-3K • Win up to 10K • Daily 8PM • Airtel 0745123623</p>
 
 <div class="games">
@@ -67,27 +69,28 @@ h1{text-align:center;color:#00ff88;text-shadow:0 0 15px #00ff88;margin-top:15px;
 </div>
 
 <div class="payment">
-<h3 style="color:#00ff88;font-size:16px">💳 Airtel Money</h3>
+<h3 style="color:#00ff88;font-size:16px">Airtel Money</h3>
 <p style="margin:6px 0;font-size:14px">Send to: <b style="color:#00ff88;font-size:20px">0745123623</b></p>
-<p style="font-size:11px;color:#888">Moses Drex • Screenshot after payment</p>
-<a href="https://wa.me/256745123623" class="btn" style="background:#25D366;color:white;margin-top:12px">📱 Chat WhatsApp to Join</a>
+<p style="font-size:11px;color:#888">Moses Drex - Screenshot after payment</p>
+<a href="https://wa.me/256745123623" class="btn" style="background:#25D366;color:white;margin-top:12px">Chat WhatsApp to Join</a>
 </div>
 
 <div class="footer">
-<p><b style="color:#00ff88">DREX HUB</b> - Uganda's #1 Gaming Community<br>Daily Tournaments 8PM EAT • Fair Play • Instant Payout<br>TikTok: @drexesports • WhatsApp: 0745123623<br><br>© 2026 DREX HUB - Kampala, UG</p>
+<p><b style="color:#00ff88">DREX HUB</b> - Uganda's #1 Gaming Community<br>Daily Tournaments 8PM EAT • Fair Play • Instant Payout<br>TikTok: @drexesports • WhatsApp: 0745123623<br><br>2026 DREX HUB - Kampala, UG</p>
 </div>
 </div>
 
-<div id="drex-bot" onclick="let c=document.getElementById('drex-chat');c.style.display=c.style.display=='block'?'none':'block'">🤖</div>
+<div id="drex-bot" onclick="let c=document.getElementById('drex-chat');c.style.display=c.style.display=='block'?'none':'block'">D</div>
 <div id="drex-chat">
-<h4 style="color:#00ff88;margin-bottom:8px">🤖 DREX Bot</h4>
-<div class="chat-msg">Yo! Welcome to DREX HUB 💚<br><br>• PUBG/Free Fire/CODM: 2K → Win 5K<br>• eFootball: 3K → Win 10K<br><br>Pay Airtel: <b>0745123623</b></div>
+<h4 style="color:#00ff88;margin-bottom:8px">DREX Bot</h4>
+<div class="chat-msg">Welcome to DREX HUB<br><br>• PUBG/Free Fire/CODM: 2K to Win 5K<br>• eFootball: 3K to Win 10K<br><br>Pay Airtel: 0745123623<br>Daily 8PM EAT</div>
 </div>
 
 <script>
 const c=document.getElementById('matrix'),x=c.getContext('2d');c.width=innerWidth;c.height=innerHeight;const cols=c.width/14,drops=Array(Math.floor(cols)).fill(1);
 function draw(){x.fillStyle='rgba(0,0,0,0.08)';x.fillRect(0,0,c.width,c.height);x.fillStyle='#00ff88';x.font='14px monospace';drops.forEach((y,i)=>{x.fillText('01'[Math.floor(Math.random()*2)],i*14,y*14);if(y*14>c.height&&Math.random()>0.975)drops[i]=0;drops[i]++});}
 setInterval(draw,40);
+window.onresize=()=>{c.width=innerWidth;c.height=innerHeight;}
 </script>
 </body>
 </html>
