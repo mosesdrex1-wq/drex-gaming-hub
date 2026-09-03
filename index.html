@@ -3,64 +3,70 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>DREX HUB - Uganda's #1 Daily Esports Tournaments</title>
-<meta name="description" content="DREX HUB Kampala daily 8PM tournaments PUBG, Free Fire, CODM, DLS, eFootball.">
+<title>DREX HUB | Uganda's Premier Esports Arena</title>
+<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@700;900&family=Inter:wght@400;600&display=swap" rel="stylesheet">
 <style>
-*{margin:0;padding:0;box-sizing:border-box;font-family:Arial,sans-serif}
-body{background:#0a0a0a;color:#fff}
-.hero{background:linear-gradient(135deg,#00ff88,#00ccff);padding:60px 20px;text-align:center;color:#000}
-.hero h1{font-size:42px;font-weight:900}
-.btn{display:inline-block;background:#000;color:#00ff88;padding:14px 28px;border-radius:30px;text-decoration:none;font-weight:bold;margin:8px}
-.games{padding:30px 15px;display:grid;grid-template-columns:repeat(2,1fr);gap:15px}
-.card{background:#1a1a1a;padding:15px;border-radius:15px;text-align:center;border:1px solid #00ff88}
-.card img{width:80px;height:80px;object-fit:cover;border-radius:10px;margin-bottom:10px;background:#fff}
-.card h3{color:#00ff88;font-size:16px}
-.pay{padding:30px 20px;background:#111;text-align:center}
-.pay-box{background:#00ff88;color:#000;padding:15px 25px;border-radius:12px;display:inline-block;font-weight:bold}
-footer{padding:20px;text-align:center;color:#888;font-size:12px}
+*{margin:0;padding:0;box-sizing:border-box}
+body{background:#08080a;color:#fff;font-family:'Inter',sans-serif}
+.hero{background:radial-gradient(800px at 50% -10%, #00ff8855, transparent), linear-gradient(180deg, #0f1a14 0%, #08080a 100%);padding:70px 20px 40px;text-align:center;border-bottom:1px solid #ffffff10}
+.hero h1{font-family:'Orbitron';font-size:48px;font-weight:900;letter-spacing:3px;background:linear-gradient(90deg,#00ff88,#00ccff);-webkit-background-clip:text;-webkit-text-fill-color:transparent}
+.hero .tag{color:#888;margin:12px 0;font-size:13px;letter-spacing:4px;text-transform:uppercase}
+.hero .sub{color:#ccc;font-size:16px;margin-bottom:25px}
+.btn-main{display:inline-block;background:#fff;color:#000;padding:14px 32px;border-radius:100px;font-weight:800;text-decoration:none;margin:6px;font-family:'Orbitron';font-size:13px;letter-spacing:1px}
+.btn-ghost{display:inline-block;border:1px solid #ffffff30;color:#fff;padding:14px 32px;border-radius:100px;font-weight:600;text-decoration:none;margin:6px;font-size:13px}
+.section{max-width:1100px;margin:0 auto;padding:30px 15px}
+.section h2{font-family:'Orbitron';font-size:18px;letter-spacing:2px;margin-bottom:18px;color:#fff;display:flex;align-items:center;gap:10px}
+.section h2::before{content:'';width:4px;height:18px;background:#00ff88;display:inline-block;border-radius:2px}
+.grid{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.card{background:linear-gradient(180deg, #15151a 0%, #101014 100%);border:1px solid #ffffff12;border-radius:18px;padding:18px;text-align:left;display:flex;gap:14px;align-items:center;position:relative;overflow:hidden;transition:0.2s}
+.card:hover{border-color:#00ff8855;transform:translateY(-2px)}
+.card img{width:64px;height:64px;border-radius:12px;object-fit:cover;background:#000;flex-shrink:0}
+.card h3{font-family:'Orbitron';font-size:13px;letter-spacing:1px;color:#fff}
+.card .meta{font-size:11px;color:#888;margin-top:4px}
+.card .win{position:absolute;top:14px;right:14px;background:#00ff8815;color:#00ff88;border:1px solid #00ff8830;padding:4px 8px;border-radius:20px;font-size:10px;font-weight:800;letter-spacing:1px}
+.pay-card{background:linear-gradient(135deg,#00ff88 0%,#00ccff 100%);border-radius:20px;padding:2px;margin-top:20px}
+.pay-inner{background:#0e0e10;border-radius:18px;padding:24px;text-align:center}
+.pay-box{background:#fff;color:#000;padding:10px 20px;border-radius:12px;display:inline-block;font-weight:900;margin:12px 0;letter-spacing:0.5px}
+footer{border-top:1px solid #ffffff10;padding:30px;text-align:center;color:#555;font-size:11px;letter-spacing:1px}
+.live{width:8px;height:8px;background:#ff2a2a;border-radius:50%;display:inline-block;box-shadow:0 0 10px #ff2a2a;animation:pulse 1.5s infinite}
+@keyframes pulse{0%{opacity:1}50%{opacity:0.4}100%{opacity:1}}
 </style>
 </head>
 <body>
 
 <div class="hero">
 <h1>DREX HUB</h1>
-<p>Uganda's Daily Esports Arena - Kampala</p>
-<p>🔥 PUBG • Free Fire • CODM • DLS • eFootball - Daily 8PM EAT</p>
-<a class="btn" href="https://wa.me/256745123623?text=Hi%20DREX%20HUB%20I%20want%20to%20join">JOIN ON WHATSAPP</a>
-<a class="btn" href="https://www.tiktok.com/@drexesports">Follow @drexesports</a>
-</div>
-
-<div class="games">
-<div class="card">
-<img src="pubg.jpg" alt="PUBG">
-<h3>PUBG Mobile</h3><p>2K Entry<br><b>WIN 5K</b></p>
-</div>
-<div class="card">
-<img src="freefire.jpg" alt="Free Fire">
-<h3>Free Fire</h3><p>2K Entry<br><b>WIN 5K</b></p>
-</div>
-<div class="card">
-<img src="codm.jpg" alt="CODM">
-<h3>CODM</h3><p>2K Entry<br><b>WIN 5K</b></p>
-</div>
-<div class="card">
-<img src="ffmax.jpg" alt="FF MAX">
-<h3>Free Fire Max</h3><p>2K Entry<br><b>WIN 5K</b></p>
-</div>
-<div class="card">
-<img src="efootball.jpg" alt="eFootball">
-<h3>eFootball</h3><p>3K Entry<br><b>WIN 10K</b></p>
+<div class="tag">Kampala • Uganda • East Africa</div>
+<p class="sub">Daily Competitive Lobbies • 8PM EAT • Prize Pool Paid Instantly</p>
+<div>
+<a class="btn-main" href="https://wa.me/256745123623">JOIN WHATSAPP</a>
+<a class="btn-ghost" href="https://www.tiktok.com/@drexesports">TIKTOK @drexesports</a>
 </div>
 </div>
 
-<div class="pay">
-<h2>How To Join Tonight 8PM</h2><br>
-<p>Send entry to Airtel Money</p><br>
-<div class="pay-box">Airtel: 0745123623<br>Name: Namukose Janifer</div>
-<br><br>
-<a class="btn" href="https://wa.me/256745123623">WhatsApp 0745123623</a>
+<div class="section">
+<h2><span class="live"></span> LIVE TOURNAMENTS TONIGHT</h2>
+<div class="grid">
+<div class="card"><img src="pubg.jpg"><div><h3>PUBG MOBILE</h3><div class="meta">2K Entry • Solo • Erangel<br>Room: 7:50 PM EAT</div></div><div class="win">WIN 5K</div></div>
+<div class="card"><img src="freefire.jpg"><div><h3>FREE FIRE</h3><div class="meta">2K Entry • Clash Squad<br>Starts 8:30 PM EAT</div></div><div class="win">WIN 5K</div></div>
+<div class="card"><img src="codm.jpg"><div><h3>CALL OF DUTY MOBILE</h3><div class="meta">2K Entry • Battle Royale<br>15 Slots</div></div><div class="win">WIN 5K</div></div>
+<div class="card"><img src="ffmax.jpg"><div><h3>FF MAX</h3><div class="meta">2K Entry • BR Ranked<br>8:45 PM EAT</div></div><div class="win">WIN 5K</div></div>
+<div class="card" style="grid-column:span 2"><img src="efootball.jpg"><div><h3>EFOOTBALL 26 • 1V1 KNOCKOUT</h3><div class="meta">3K Entry • Finals 9:30 PM • Instant Payout via Airtel Money</div></div><div class="win">WIN 10K</div></div>
 </div>
 
-<footer>DREX HUB - Founded by Moses Drex | Kampala, Uganda | @drexesports</footer>
+<div class="pay-card">
+<div class="pay-inner">
+<h3 style="font-family:'Orbitron';font-size:14px;letter-spacing:2px">SECURED BY DREX PAY</h3>
+<p style="font-size:12px;color:#888;margin-top:6px">Official Airtel Money Merchant</p>
+<div class="pay-box">0745123623 • Namukose Janifer</div>
+<p style="font-size:11px;color:#aaa">Send screenshot + In-Game Name on WhatsApp after payment</p>
+<br>
+<a class="btn-main" style="background:#00ff88" href="https://wa.me/256745123623?text=Hi%20DREX%20HUB%20I%20have%20paid">I HAVE PAID</a>
+</div>
+</div>
+</div>
+
+<footer>DREX HUB © 2026 — FOUNDED BY MOSES DREX — KAMPALA, UGANDA<br>Designed for MTN Uganda x Drex Esports Partnership</footer>
+
 </body>
 </html>
